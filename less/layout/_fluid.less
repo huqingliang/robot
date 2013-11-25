@@ -1,0 +1,101 @@
+/**
+ * 流式布局底稿 Fluid Layout
+ * 
+ * @author huqingliang 2013-10-17
+ * @gridColumns 列数
+ * @gridColumnWidth 列宽
+ * @gridGutterWidth 列边距
+ * 
+ */
+
+@cMinWidth : @container-min-width/2;
+
+.container-fluid{
+  min-width: @container-min-width;
+  margin-left: 0;
+  margin-right: auto;
+  padding: 0;
+  padding-right: 20px;
+  
+  // 第一个布局元素左外边距为0，放在最前面定义，后面offset的左外边距可以覆盖他
+  .row-fluid [class*="span"] {   
+    float: left;
+    // 解决边框占比问题
+    .box-sizing(border-box);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .row-fluid{
+    .clearfix();
+    .first-child {
+      margin-left: 0;
+    }
+  }
+  
+  /** default min-width:1280px layout for that browser of no support media  */
+  .makeFluid(24 ,34.167px ,20px);
+  
+  @media (max-width:@cMinWidth){
+    .row-fluid [class*="span"] {  
+      margin-left: 0;
+      width: 100%; 
+    }
+  }
+  //@media (min-width:1279px){
+  //  .makeFluid(24 ,28.5px ,20px);
+  //}
+  //@media (min-width:1399px){
+  //  .makeFluid(24 ,38px ,20px);
+  //}
+}
+
+
+.makeFluid(@gridColumns: 24, @gridColumnWidth: 30px, @gridGutterWidth: 10px){
+  @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+  @fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+  @fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+  
+  .robot-fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
+    .spanX (@index) when (@index > 0) {
+      (~".span@{index}") { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}
+    
+    .span (@columns) {
+      width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+    }
+    .span (@columns) when (@columns < 24){
+      margin-left: @fluidGridGutterWidth;
+    }
+
+    .offsetX (@index) when (@index > 0) {
+      (~'.offset@{index}') { .offset(@index); }
+      (~'.offset@{index}:first-child') { 
+         .offsetFirstChild(@index); 
+        //margin-left : 0;
+      }
+      .offsetX(@index - 1);
+    }
+    .offsetX (0) {}
+
+    .offset (@columns) {
+      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
+    }
+    // 覆盖first-child左外边距
+    .offsetFirstChild (@columns) {
+      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * @columns);
+    }
+
+    .row-fluid {
+      /**
+       * define module of row-fluid
+       */
+      // generate .spanX and .offsetX
+      .spanX (@gridColumns);
+      .offsetX (@gridColumns);
+    }
+  }
+  .robot-fluid (@fluidGridColumnWidth, @fluidGridGutterWidth);
+}

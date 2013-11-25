@@ -1,0 +1,1374 @@
+/**
+ * @desc:     固定布局底稿，container-grid
+ * @author:   qingliang_hu
+ * @time:     2013-10-17
+ */
+
+/**
+ * robot v1.0
+ * public method and reset html
+ * reset html
+ */
+
+/* Mixins */
+
+/** Global values */
+
+/** Grays */
+
+/** Brand colors */
+
+/** Scaffolding */
+
+/** Links */
+
+/** Components Based on 14px font-size and 1.428 line-height (~20px to start) */
+
+/** Buttons */
+
+/** Dropdowns */
+
+/** 
+ Z-index master list
+ -------------------------
+ Used for a bird's eye view of components dependent on the z-axis
+ Try to avoid customizing these :)
+*/
+
+/** Typography */
+
+/** Forms */
+
+.container {
+  width: 1189.992px;
+  min-width: 990px;
+  padding: 0;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.container .row {
+  margin: 0;
+}
+
+.container .row:before,
+.container .row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.container .row:after {
+  clear: both;
+}
+
+.container .row [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+.container .row {
+  /** generate spanX and offsetX **/
+
+}
+
+.container .row .span24 {
+  float: left;
+  width: 1189.992px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span23 {
+  float: left;
+  width: 1139.909px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span22 {
+  float: left;
+  width: 1089.826px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span21 {
+  float: left;
+  width: 1039.743px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span20 {
+  float: left;
+  width: 989.66px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span19 {
+  float: left;
+  width: 939.577px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span18 {
+  float: left;
+  width: 889.4939999999999px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span17 {
+  float: left;
+  width: 839.411px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span16 {
+  float: left;
+  width: 789.328px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span15 {
+  float: left;
+  width: 739.245px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span14 {
+  float: left;
+  width: 689.162px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span13 {
+  float: left;
+  width: 639.079px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span12 {
+  float: left;
+  width: 588.996px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span11 {
+  float: left;
+  width: 538.913px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span10 {
+  float: left;
+  width: 488.83px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span9 {
+  float: left;
+  width: 438.74699999999996px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span8 {
+  float: left;
+  width: 388.664px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span7 {
+  float: left;
+  width: 338.581px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span6 {
+  float: left;
+  width: 288.498px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span5 {
+  float: left;
+  width: 238.415px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span4 {
+  float: left;
+  width: 188.332px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span3 {
+  float: left;
+  width: 138.249px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span2 {
+  float: left;
+  width: 88.166px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .span1 {
+  float: left;
+  width: 38.083px;
+  min-height: 1px;
+  margin-left: 12px;
+}
+
+.container .row .offset24 {
+  margin-left: 1213.992px;
+}
+
+.container .row .offset24:first-child {
+  margin-left: 1201.992px;
+}
+
+.container .row .offset23 {
+  margin-left: 1163.909px;
+}
+
+.container .row .offset23:first-child {
+  margin-left: 1151.909px;
+}
+
+.container .row .offset22 {
+  margin-left: 1113.826px;
+}
+
+.container .row .offset22:first-child {
+  margin-left: 1101.826px;
+}
+
+.container .row .offset21 {
+  margin-left: 1063.743px;
+}
+
+.container .row .offset21:first-child {
+  margin-left: 1051.743px;
+}
+
+.container .row .offset20 {
+  margin-left: 1013.66px;
+}
+
+.container .row .offset20:first-child {
+  margin-left: 1001.66px;
+}
+
+.container .row .offset19 {
+  margin-left: 963.577px;
+}
+
+.container .row .offset19:first-child {
+  margin-left: 951.577px;
+}
+
+.container .row .offset18 {
+  margin-left: 913.4939999999999px;
+}
+
+.container .row .offset18:first-child {
+  margin-left: 901.4939999999999px;
+}
+
+.container .row .offset17 {
+  margin-left: 863.411px;
+}
+
+.container .row .offset17:first-child {
+  margin-left: 851.411px;
+}
+
+.container .row .offset16 {
+  margin-left: 813.328px;
+}
+
+.container .row .offset16:first-child {
+  margin-left: 801.328px;
+}
+
+.container .row .offset15 {
+  margin-left: 763.245px;
+}
+
+.container .row .offset15:first-child {
+  margin-left: 751.245px;
+}
+
+.container .row .offset14 {
+  margin-left: 713.162px;
+}
+
+.container .row .offset14:first-child {
+  margin-left: 701.162px;
+}
+
+.container .row .offset13 {
+  margin-left: 663.079px;
+}
+
+.container .row .offset13:first-child {
+  margin-left: 651.079px;
+}
+
+.container .row .offset12 {
+  margin-left: 612.996px;
+}
+
+.container .row .offset12:first-child {
+  margin-left: 600.996px;
+}
+
+.container .row .offset11 {
+  margin-left: 562.913px;
+}
+
+.container .row .offset11:first-child {
+  margin-left: 550.913px;
+}
+
+.container .row .offset10 {
+  margin-left: 512.8299999999999px;
+}
+
+.container .row .offset10:first-child {
+  margin-left: 500.83px;
+}
+
+.container .row .offset9 {
+  margin-left: 462.74699999999996px;
+}
+
+.container .row .offset9:first-child {
+  margin-left: 450.74699999999996px;
+}
+
+.container .row .offset8 {
+  margin-left: 412.664px;
+}
+
+.container .row .offset8:first-child {
+  margin-left: 400.664px;
+}
+
+.container .row .offset7 {
+  margin-left: 362.581px;
+}
+
+.container .row .offset7:first-child {
+  margin-left: 350.581px;
+}
+
+.container .row .offset6 {
+  margin-left: 312.498px;
+}
+
+.container .row .offset6:first-child {
+  margin-left: 300.498px;
+}
+
+.container .row .offset5 {
+  margin-left: 262.41499999999996px;
+}
+
+.container .row .offset5:first-child {
+  margin-left: 250.415px;
+}
+
+.container .row .offset4 {
+  margin-left: 212.332px;
+}
+
+.container .row .offset4:first-child {
+  margin-left: 200.332px;
+}
+
+.container .row .offset3 {
+  margin-left: 162.249px;
+}
+
+.container .row .offset3:first-child {
+  margin-left: 150.249px;
+}
+
+.container .row .offset2 {
+  margin-left: 112.166px;
+}
+
+.container .row .offset2:first-child {
+  margin-left: 100.166px;
+}
+
+.container .row .offset1 {
+  margin-left: 62.083px;
+}
+
+.container .row .offset1:first-child {
+  margin-left: 50.083px;
+}
+
+@media (min-width: 990px) {
+  .container {
+    /*margin: 0 auto;*/
+  
+    width: 990px;
+    /**
+         * define module of spanX
+         * spanX(X = 1\2\3...)
+         */
+  
+    /**
+         * define module of offsetX
+         * offsetX(X = 1\2\3...)
+         */
+  
+    /**
+         * define module of row
+         */
+  
+  }
+  .container .row {
+    /** generate spanX and offsetX **/
+  
+  }
+  .container .row .span24 {
+    float: left;
+    width: 990px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span23 {
+    float: left;
+    width: 948.25px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span22 {
+    float: left;
+    width: 906.5px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span21 {
+    float: left;
+    width: 864.75px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span20 {
+    float: left;
+    width: 823px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span19 {
+    float: left;
+    width: 781.25px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span18 {
+    float: left;
+    width: 739.5px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span17 {
+    float: left;
+    width: 697.75px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span16 {
+    float: left;
+    width: 656px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span15 {
+    float: left;
+    width: 614.25px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span14 {
+    float: left;
+    width: 572.5px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span13 {
+    float: left;
+    width: 530.75px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span12 {
+    float: left;
+    width: 489px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span11 {
+    float: left;
+    width: 447.25px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span10 {
+    float: left;
+    width: 405.5px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span9 {
+    float: left;
+    width: 363.75px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span8 {
+    float: left;
+    width: 322px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span7 {
+    float: left;
+    width: 280.25px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span6 {
+    float: left;
+    width: 238.5px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span5 {
+    float: left;
+    width: 196.75px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span4 {
+    float: left;
+    width: 155px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span3 {
+    float: left;
+    width: 113.25px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span2 {
+    float: left;
+    width: 71.5px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span1 {
+    float: left;
+    width: 29.75px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .offset24 {
+    margin-left: 1014px;
+  }
+  .container .row .offset24:first-child {
+    margin-left: 1002px;
+  }
+  .container .row .offset23 {
+    margin-left: 972.25px;
+  }
+  .container .row .offset23:first-child {
+    margin-left: 960.25px;
+  }
+  .container .row .offset22 {
+    margin-left: 930.5px;
+  }
+  .container .row .offset22:first-child {
+    margin-left: 918.5px;
+  }
+  .container .row .offset21 {
+    margin-left: 888.75px;
+  }
+  .container .row .offset21:first-child {
+    margin-left: 876.75px;
+  }
+  .container .row .offset20 {
+    margin-left: 847px;
+  }
+  .container .row .offset20:first-child {
+    margin-left: 835px;
+  }
+  .container .row .offset19 {
+    margin-left: 805.25px;
+  }
+  .container .row .offset19:first-child {
+    margin-left: 793.25px;
+  }
+  .container .row .offset18 {
+    margin-left: 763.5px;
+  }
+  .container .row .offset18:first-child {
+    margin-left: 751.5px;
+  }
+  .container .row .offset17 {
+    margin-left: 721.75px;
+  }
+  .container .row .offset17:first-child {
+    margin-left: 709.75px;
+  }
+  .container .row .offset16 {
+    margin-left: 680px;
+  }
+  .container .row .offset16:first-child {
+    margin-left: 668px;
+  }
+  .container .row .offset15 {
+    margin-left: 638.25px;
+  }
+  .container .row .offset15:first-child {
+    margin-left: 626.25px;
+  }
+  .container .row .offset14 {
+    margin-left: 596.5px;
+  }
+  .container .row .offset14:first-child {
+    margin-left: 584.5px;
+  }
+  .container .row .offset13 {
+    margin-left: 554.75px;
+  }
+  .container .row .offset13:first-child {
+    margin-left: 542.75px;
+  }
+  .container .row .offset12 {
+    margin-left: 513px;
+  }
+  .container .row .offset12:first-child {
+    margin-left: 501px;
+  }
+  .container .row .offset11 {
+    margin-left: 471.25px;
+  }
+  .container .row .offset11:first-child {
+    margin-left: 459.25px;
+  }
+  .container .row .offset10 {
+    margin-left: 429.5px;
+  }
+  .container .row .offset10:first-child {
+    margin-left: 417.5px;
+  }
+  .container .row .offset9 {
+    margin-left: 387.75px;
+  }
+  .container .row .offset9:first-child {
+    margin-left: 375.75px;
+  }
+  .container .row .offset8 {
+    margin-left: 346px;
+  }
+  .container .row .offset8:first-child {
+    margin-left: 334px;
+  }
+  .container .row .offset7 {
+    margin-left: 304.25px;
+  }
+  .container .row .offset7:first-child {
+    margin-left: 292.25px;
+  }
+  .container .row .offset6 {
+    margin-left: 262.5px;
+  }
+  .container .row .offset6:first-child {
+    margin-left: 250.5px;
+  }
+  .container .row .offset5 {
+    margin-left: 220.75px;
+  }
+  .container .row .offset5:first-child {
+    margin-left: 208.75px;
+  }
+  .container .row .offset4 {
+    margin-left: 179px;
+  }
+  .container .row .offset4:first-child {
+    margin-left: 167px;
+  }
+  .container .row .offset3 {
+    margin-left: 137.25px;
+  }
+  .container .row .offset3:first-child {
+    margin-left: 125.25px;
+  }
+  .container .row .offset2 {
+    margin-left: 95.5px;
+  }
+  .container .row .offset2:first-child {
+    margin-left: 83.5px;
+  }
+  .container .row .offset1 {
+    margin-left: 53.75px;
+  }
+  .container .row .offset1:first-child {
+    margin-left: 41.75px;
+  }
+}
+
+@media (min-width: 1279px) {
+  .container {
+    /*margin: 0 auto;*/
+  
+    width: 1189.992px;
+    /**
+         * define module of spanX
+         * spanX(X = 1\2\3...)
+         */
+  
+    /**
+         * define module of offsetX
+         * offsetX(X = 1\2\3...)
+         */
+  
+    /**
+         * define module of row
+         */
+  
+  }
+  .container .row {
+    /** generate spanX and offsetX **/
+  
+  }
+  .container .row .span24 {
+    float: left;
+    width: 1189.992px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span23 {
+    float: left;
+    width: 1139.909px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span22 {
+    float: left;
+    width: 1089.826px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span21 {
+    float: left;
+    width: 1039.743px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span20 {
+    float: left;
+    width: 989.66px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span19 {
+    float: left;
+    width: 939.577px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span18 {
+    float: left;
+    width: 889.4939999999999px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span17 {
+    float: left;
+    width: 839.411px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span16 {
+    float: left;
+    width: 789.328px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span15 {
+    float: left;
+    width: 739.245px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span14 {
+    float: left;
+    width: 689.162px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span13 {
+    float: left;
+    width: 639.079px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span12 {
+    float: left;
+    width: 588.996px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span11 {
+    float: left;
+    width: 538.913px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span10 {
+    float: left;
+    width: 488.83px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span9 {
+    float: left;
+    width: 438.74699999999996px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span8 {
+    float: left;
+    width: 388.664px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span7 {
+    float: left;
+    width: 338.581px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span6 {
+    float: left;
+    width: 288.498px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span5 {
+    float: left;
+    width: 238.415px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span4 {
+    float: left;
+    width: 188.332px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span3 {
+    float: left;
+    width: 138.249px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span2 {
+    float: left;
+    width: 88.166px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span1 {
+    float: left;
+    width: 38.083px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .offset24 {
+    margin-left: 1213.992px;
+  }
+  .container .row .offset24:first-child {
+    margin-left: 1201.992px;
+  }
+  .container .row .offset23 {
+    margin-left: 1163.909px;
+  }
+  .container .row .offset23:first-child {
+    margin-left: 1151.909px;
+  }
+  .container .row .offset22 {
+    margin-left: 1113.826px;
+  }
+  .container .row .offset22:first-child {
+    margin-left: 1101.826px;
+  }
+  .container .row .offset21 {
+    margin-left: 1063.743px;
+  }
+  .container .row .offset21:first-child {
+    margin-left: 1051.743px;
+  }
+  .container .row .offset20 {
+    margin-left: 1013.66px;
+  }
+  .container .row .offset20:first-child {
+    margin-left: 1001.66px;
+  }
+  .container .row .offset19 {
+    margin-left: 963.577px;
+  }
+  .container .row .offset19:first-child {
+    margin-left: 951.577px;
+  }
+  .container .row .offset18 {
+    margin-left: 913.4939999999999px;
+  }
+  .container .row .offset18:first-child {
+    margin-left: 901.4939999999999px;
+  }
+  .container .row .offset17 {
+    margin-left: 863.411px;
+  }
+  .container .row .offset17:first-child {
+    margin-left: 851.411px;
+  }
+  .container .row .offset16 {
+    margin-left: 813.328px;
+  }
+  .container .row .offset16:first-child {
+    margin-left: 801.328px;
+  }
+  .container .row .offset15 {
+    margin-left: 763.245px;
+  }
+  .container .row .offset15:first-child {
+    margin-left: 751.245px;
+  }
+  .container .row .offset14 {
+    margin-left: 713.162px;
+  }
+  .container .row .offset14:first-child {
+    margin-left: 701.162px;
+  }
+  .container .row .offset13 {
+    margin-left: 663.079px;
+  }
+  .container .row .offset13:first-child {
+    margin-left: 651.079px;
+  }
+  .container .row .offset12 {
+    margin-left: 612.996px;
+  }
+  .container .row .offset12:first-child {
+    margin-left: 600.996px;
+  }
+  .container .row .offset11 {
+    margin-left: 562.913px;
+  }
+  .container .row .offset11:first-child {
+    margin-left: 550.913px;
+  }
+  .container .row .offset10 {
+    margin-left: 512.8299999999999px;
+  }
+  .container .row .offset10:first-child {
+    margin-left: 500.83px;
+  }
+  .container .row .offset9 {
+    margin-left: 462.74699999999996px;
+  }
+  .container .row .offset9:first-child {
+    margin-left: 450.74699999999996px;
+  }
+  .container .row .offset8 {
+    margin-left: 412.664px;
+  }
+  .container .row .offset8:first-child {
+    margin-left: 400.664px;
+  }
+  .container .row .offset7 {
+    margin-left: 362.581px;
+  }
+  .container .row .offset7:first-child {
+    margin-left: 350.581px;
+  }
+  .container .row .offset6 {
+    margin-left: 312.498px;
+  }
+  .container .row .offset6:first-child {
+    margin-left: 300.498px;
+  }
+  .container .row .offset5 {
+    margin-left: 262.41499999999996px;
+  }
+  .container .row .offset5:first-child {
+    margin-left: 250.415px;
+  }
+  .container .row .offset4 {
+    margin-left: 212.332px;
+  }
+  .container .row .offset4:first-child {
+    margin-left: 200.332px;
+  }
+  .container .row .offset3 {
+    margin-left: 162.249px;
+  }
+  .container .row .offset3:first-child {
+    margin-left: 150.249px;
+  }
+  .container .row .offset2 {
+    margin-left: 112.166px;
+  }
+  .container .row .offset2:first-child {
+    margin-left: 100.166px;
+  }
+  .container .row .offset1 {
+    margin-left: 62.083px;
+  }
+  .container .row .offset1:first-child {
+    margin-left: 50.083px;
+  }
+}
+
+@media (min-width: 1399px) {
+  .container {
+    /*margin: 0 auto;*/
+  
+    width: 1390.008px;
+    /**
+         * define module of spanX
+         * spanX(X = 1\2\3...)
+         */
+  
+    /**
+         * define module of offsetX
+         * offsetX(X = 1\2\3...)
+         */
+  
+    /**
+         * define module of row
+         */
+  
+  }
+  .container .row {
+    /** generate spanX and offsetX **/
+  
+  }
+  .container .row .span24 {
+    float: left;
+    width: 1390.008px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span23 {
+    float: left;
+    width: 1331.5910000000001px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span22 {
+    float: left;
+    width: 1273.174px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span21 {
+    float: left;
+    width: 1214.757px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span20 {
+    float: left;
+    width: 1156.3400000000001px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span19 {
+    float: left;
+    width: 1097.923px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span18 {
+    float: left;
+    width: 1039.506px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span17 {
+    float: left;
+    width: 981.089px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span16 {
+    float: left;
+    width: 922.672px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span15 {
+    float: left;
+    width: 864.255px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span14 {
+    float: left;
+    width: 805.838px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span13 {
+    float: left;
+    width: 747.421px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span12 {
+    float: left;
+    width: 689.004px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span11 {
+    float: left;
+    width: 630.587px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span10 {
+    float: left;
+    width: 572.1700000000001px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span9 {
+    float: left;
+    width: 513.753px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span8 {
+    float: left;
+    width: 455.336px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span7 {
+    float: left;
+    width: 396.919px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span6 {
+    float: left;
+    width: 338.502px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span5 {
+    float: left;
+    width: 280.08500000000004px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span4 {
+    float: left;
+    width: 221.668px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span3 {
+    float: left;
+    width: 163.251px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span2 {
+    float: left;
+    width: 104.834px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .span1 {
+    float: left;
+    width: 46.417px;
+    min-height: 1px;
+    margin-left: 12px;
+  }
+  .container .row .offset24 {
+    margin-left: 1414.008px;
+  }
+  .container .row .offset24:first-child {
+    margin-left: 1402.008px;
+  }
+  .container .row .offset23 {
+    margin-left: 1355.5910000000001px;
+  }
+  .container .row .offset23:first-child {
+    margin-left: 1343.5910000000001px;
+  }
+  .container .row .offset22 {
+    margin-left: 1297.174px;
+  }
+  .container .row .offset22:first-child {
+    margin-left: 1285.174px;
+  }
+  .container .row .offset21 {
+    margin-left: 1238.757px;
+  }
+  .container .row .offset21:first-child {
+    margin-left: 1226.757px;
+  }
+  .container .row .offset20 {
+    margin-left: 1180.3400000000001px;
+  }
+  .container .row .offset20:first-child {
+    margin-left: 1168.3400000000001px;
+  }
+  .container .row .offset19 {
+    margin-left: 1121.923px;
+  }
+  .container .row .offset19:first-child {
+    margin-left: 1109.923px;
+  }
+  .container .row .offset18 {
+    margin-left: 1063.506px;
+  }
+  .container .row .offset18:first-child {
+    margin-left: 1051.506px;
+  }
+  .container .row .offset17 {
+    margin-left: 1005.089px;
+  }
+  .container .row .offset17:first-child {
+    margin-left: 993.089px;
+  }
+  .container .row .offset16 {
+    margin-left: 946.672px;
+  }
+  .container .row .offset16:first-child {
+    margin-left: 934.672px;
+  }
+  .container .row .offset15 {
+    margin-left: 888.255px;
+  }
+  .container .row .offset15:first-child {
+    margin-left: 876.255px;
+  }
+  .container .row .offset14 {
+    margin-left: 829.838px;
+  }
+  .container .row .offset14:first-child {
+    margin-left: 817.838px;
+  }
+  .container .row .offset13 {
+    margin-left: 771.421px;
+  }
+  .container .row .offset13:first-child {
+    margin-left: 759.421px;
+  }
+  .container .row .offset12 {
+    margin-left: 713.004px;
+  }
+  .container .row .offset12:first-child {
+    margin-left: 701.004px;
+  }
+  .container .row .offset11 {
+    margin-left: 654.587px;
+  }
+  .container .row .offset11:first-child {
+    margin-left: 642.587px;
+  }
+  .container .row .offset10 {
+    margin-left: 596.1700000000001px;
+  }
+  .container .row .offset10:first-child {
+    margin-left: 584.1700000000001px;
+  }
+  .container .row .offset9 {
+    margin-left: 537.753px;
+  }
+  .container .row .offset9:first-child {
+    margin-left: 525.753px;
+  }
+  .container .row .offset8 {
+    margin-left: 479.336px;
+  }
+  .container .row .offset8:first-child {
+    margin-left: 467.336px;
+  }
+  .container .row .offset7 {
+    margin-left: 420.919px;
+  }
+  .container .row .offset7:first-child {
+    margin-left: 408.919px;
+  }
+  .container .row .offset6 {
+    margin-left: 362.502px;
+  }
+  .container .row .offset6:first-child {
+    margin-left: 350.502px;
+  }
+  .container .row .offset5 {
+    margin-left: 304.08500000000004px;
+  }
+  .container .row .offset5:first-child {
+    margin-left: 292.08500000000004px;
+  }
+  .container .row .offset4 {
+    margin-left: 245.668px;
+  }
+  .container .row .offset4:first-child {
+    margin-left: 233.668px;
+  }
+  .container .row .offset3 {
+    margin-left: 187.251px;
+  }
+  .container .row .offset3:first-child {
+    margin-left: 175.251px;
+  }
+  .container .row .offset2 {
+    margin-left: 128.834px;
+  }
+  .container .row .offset2:first-child {
+    margin-left: 116.834px;
+  }
+  .container .row .offset1 {
+    margin-left: 70.417px;
+  }
+  .container .row .offset1:first-child {
+    margin-left: 58.417px;
+  }
+}

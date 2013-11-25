@@ -1,0 +1,29 @@
+
+.search(@width : 200px , @input-height : 28px , @btn-width : 50px){
+  @search-width : @width;
+  @search-input-padding : 8px;
+  @search-child-width : percentage((@search-width - (@search-input-padding * 2))/@search-width);
+  position : relative;
+  width : @search-width;
+  .search-input{
+    width: @search-child-width;
+    padding : 0 @search-input-padding/2; 
+    height : @input-height;
+    &:hover,
+    &:focus{
+      border : 1px solid #70c5b4;
+    }
+  }
+  .btn-search{
+    position : absolute;
+    top: 0px;
+    right: 0px;
+    width: @btn-width;
+    height: @input-height + 2;
+    .border-radius-top-left(0);
+    .border-radius-bottom-left(0);
+  }
+}
+.search{
+  .search();
+};

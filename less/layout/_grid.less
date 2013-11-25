@@ -1,0 +1,86 @@
+/**
+ * @desc:     固定布局底稿，container-grid
+ * @author:   qingliang_hu
+ * @time:     2013-10-17
+ */
+
+.container{
+  min-width: @container-min-width;
+  margin-right: auto;
+  margin-left: 0;
+  padding:0;
+  /**
+   * define module of row
+   */
+  .row {
+    margin:0;
+    .clearfix();
+  }
+  /** 第一个布局元素左外边距为0，放在最前面定义，后面offset的左外边距可以覆盖他 **/
+  .row [class*="span"]:first-child {
+    margin-left: 0
+  }
+  /** default min-width:1280px layout for that browser of no support media  */
+  .makeGrid(24 ,38.083px ,12px);
+  
+  @media (min-width:990px){
+    .makeGrid(24 ,29.75px ,12px);
+  }
+  @media (min-width:1279px){
+    .makeGrid(24 ,38.083px ,12px);
+  }
+  @media (min-width:1399px){
+    .makeGrid(24 ,46.417px ,12px);
+  }
+}
+
+.makeGrid(@columns: 24, @columnWidth: 41.83px, @gutterWidth: 12px){
+  @gridRowWidth:  (@columns * @columnWidth) + (@gutterWidth * (@columns - 1));
+  .container (@columnWidth, @gutterWidth) {
+     
+    /**
+     * define module of spanX
+     * spanX(X = 1\2\3...)
+     */
+    .spanX (@index) when (@index > 0) {
+      (~".span@{index}") { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}    
+    .span (@columns) {
+      float: left;
+      min-height: 1px; // prevent collapsing columns
+      margin-left: @gutterWidth;
+      width: (@columnWidth * @columns) + (@gutterWidth * (@columns - 1));
+    }
+    /**
+     * define module of offsetX
+     * offsetX(X = 1\2\3...)
+     */     
+    .offsetX (@index) when (@index > 0) {
+      (~'.offset@{index}') { .offset(@index); }
+      (~'.offset@{index}:first-child') { .offsetFirstChild(@index); }
+      .offsetX(@index - 1);
+    }    
+    .offsetX (0) {}
+    .offset (@columns) {
+      margin-left: (@columnWidth * @columns) + (@gutterWidth * (@columns + 1));
+    }
+    // 覆盖first-child左外边距
+    .offsetFirstChild (@columns) {
+      margin-left: (@columnWidth * @columns) + (@gutterWidth * @columns);
+    }
+    /**
+     * define module of row
+     */
+    .row {
+      /** generate spanX and offsetX **/
+      .spanX (@columns);
+      .offsetX (@columns);
+    }
+    
+  }
+  /*margin: 0 auto;*/
+  width: @gridRowWidth;
+  .container (@columnWidth, @gutterWidth);
+}

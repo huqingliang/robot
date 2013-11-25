@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>栅格响应式</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="robot"/>
+  <meta name="keywords" content="robot"/>
+  <!--<link rel="stylesheet" href="http://style.c.aliimg.com/app/dw/css/library/core/bootstrap.css" type="text/css" />--> 
+  <link rel="stylesheet" href="../dist/css/robot.css" type="text/css"/>
+  <link rel="stylesheet" href="css/index.css" type="text/css"/>
+  <link rel="stylesheet" href="http://style.c.aliimg.com/app/dw/css/shutter/block/customized.css" type="text/css" />
+  <script type="text/javascript" src="../js/library/jquery183.js"></script>
+  <script src="http://style.c.aliimg.com/fdevlib/js/lofty/port/lofty.js"></script>
+  <script src="../app.config.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row ">
+    <div class="span4">
+      <ul>
+        <li>
+          <h3><a href="grid.html">栅格响应式</a></h3>
+        </li>
+        <li>
+          <h3><a href="fulid.html">流式响应式</a></h3>
+        </li>
+        <li>
+          <h3><a href="cssFlex.html">浮动框</a></h3>
+        </li>
+        <li>
+          <h3><a href="widget.html">公共widget</a></h3>
+        </li>
+        <li>
+          <h3><a href="dialog.html">浮层</a></h3>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- second -->
+    <div class="span10">
+	    <dl class="widget">
+        <dt class="title">tab页</dt>
+        <dd>
+          <ul class="nav nav-tabs">
+             <li class="item tab-data-preview" clickcount="false">
+               <a class="tab" data-target="#d-parent-preview">数据预览</a>
+             </li>
+             <li class="active item tab-report-detail" clickcount="false">
+               <a class="tab" data-target="#report-detail">报表详情</a>
+             </li>
+             <li class="item tab-report-sql" clickcount="false">
+               <a class="tab" data-target="#report-sql">报表SQL</a>
+             </li>
+             <li class="item tab-execute-history" clickcount="false">
+               <a class="tab" data-target="#execute-history">执行历史</a>
+             </li>
+          </ul>
+        </dd>
+      </dl>
+      <dl class="widget">
+        <dt class="title">浮层</dt>
+        <dd>
+          <button id="define-del" data-target-dialog="define-del-dialog" class="btn-blue-green">删除报表</button>
+        </dd>
+      </dl>
+      <dl class="widget">
+        <dt class="title">浮层2</dt>
+        <dd>
+          <button id="define-my-report" data-target-dialog="define-report-dialog" class="btn-blue-green">点我出现浮层</button>
+          <textarea id="test-area" rows="" cols=""></textarea>
+        </dd>
+      </dl>
+      <!-- dialog start -->
+      
+      <!-- del-dialog -->
+			<div id="define-del-dialog" class="robot-dialog hide">
+			  <div class="d-header clearfix">
+			     <h3 class="font14 pull-left">删除</h3>
+			     <i class="icon-white-fork btn-cancel pull-right"></i>
+			  </div>
+			  <div class="d-content">
+			     <div class="clearfix message">
+			       <i class="icon-blue-qmark pull-left"></i> 
+			       <div class="word pull-left">             
+			         <p class="show">确定要删除删除该报表吗？</p>
+			         <p class="show">此操作不可恢复</p>
+			       </div>
+			     </div>
+			     <div class="operate clearfix">
+			       <button class="btn-cancel btn-gray pull-right">取消</button>
+			       <button class="btn-confirm btn-blue-green mr20 pull-right">确定</button>
+			    </div> 
+			  </div>
+			</div>
+			<!-- my-report -->
+			<div id="define-report-dialog" class="robot-dialog report-dialog">
+			  <div class="d-header clearfix">
+			     <h3 class="font14 pull-left">我要定制</h3>
+			     <i class="icon-white-fork btn-cancel pull-right"></i>
+			  </div>
+			  <div class="d-content">
+			     <h4>设置报表参数</h4>
+			     <ul class="param-list">
+			       <li class="clearfix">
+			         <label class="handler pull-left">统计日期：</label>
+			         <div class="btn-date-group dropdown pull-left">
+			           <input type="text" class="text-input" value="2013-06-09" />
+			           <button type="button" class="btn">
+			             <i class="icon-date"></i>
+			           </button>
+			         </div>
+			         <label class="split pull-left">-</label>
+			         <div class="btn-date-group dropdown pull-left">
+			           <input type="text" class="text-input" value="2013-06-09" />
+			           <button type="button" class="btn">
+			             <i class="icon-date"></i>
+			           </button>
+			         </div>
+			       </li>
+			       <li class="clearfix">
+			         <label class="handler pull-left">是否开通精准营销：</label>
+			         <div class="btn-date-group dropdown pull-left">
+			           <ul id="dropdown-menu" data-target="isPnpMarket" class="dropdown-menu btn-group-menu">
+			             <li data-id="1" class="menu-item"><a class="link" href="javascript:;">是</a></li>
+			             <li data-id="2" class="menu-item"><a class="link" href="javascript:;">否</a></li>
+			           </ul>
+			           <input type="text" id="isPnpMarket" class="text-input menu-value clr-mrg ft-l" data-id="1" value="是">
+			           <button type="button" class="btn" data-name="caret-down">
+			             <span class="caret caret-down"></span>
+			           </button>
+			        </div>
+			       </li>
+			     </ul>
+			       
+			     <div class="report-task">
+			       <h4>生成数据</h4>
+			       <ul id="g-data-type" class="g-data-type items mt12 clearfix">
+			         <li class="item">
+			           <label class="d-label" for="nothing">
+			              <input name="timer" id="nothing" type="radio" checked="checked"  value="N">
+			              <em>不生成</em>
+			           </label>
+			         </li>
+			         <li class="item">
+			           <label class="d-label" for="immediately">
+			              <input name="timer" id="immediately" type="radio"  value="I">
+			              <em>立即生成</em>
+			           </label>
+			         </li>
+			         <li class="item">
+			           <label class="d-label" for="timing">
+			              <input name="timer" id="timing" data-show="r-timing" data-reveive="r-receive" type="radio" value="T">
+			              <em>定时生成</em>
+			           </label>
+			         </li>
+			         <li class="item">
+			           <label class="d-label" for="cycle">
+			              <input name="timer" id="cycle" data-show="r-cycle" data-reveive="r-receive" type="radio" value="C">
+			              <em>周期生成</em>
+			           </label>
+			         </li>
+			       </ul>
+			       <ul id="control-switch" class="control-switch">
+			         <li class="item">
+			           <label class="t-label">日期：</label>
+			           <div class="btn-date-group dropdown show-line">
+			             <input type="text" class="text-input" value="2013-06-09 12:00:00" />
+			             <button type="button" class="btn">
+			               <i class="icon-date"></i>
+			             </button>
+			           </div>
+			         </li>
+			         <li class="item">
+	               <label class="t-label">接收邮件：</label>
+	               <div id="email" class="pretty" data-text="text-input" contenteditable="false">
+		               <p class="e-item">titi.wangj@alibaba-inc.com;</p>
+		               <input type="text" placeholder="输入email" class="text-input" id="text-input" data-positon="0">
+	               </div>
+		           </li>
+		           <li class="item">
+	               <label class="t-label">阿里旺旺：</label>
+	               <div id="aliww" class="pretty" data-text="ww-input" contenteditable="false">
+		               <p class="e-item">静馨霓;</p>
+		               <input type="text" placeholder="输入阿里旺旺号" class="text-input" id="ww-input" data-positon="0">
+	               </div>
+		           </li>
+               <li class="item">
+	               <label class="t-label">淘宝旺旺：</label>
+	               <div id="tbww" class="pretty" data-text="tbww-input" contenteditable="false">
+	                 <p class="e-item">qingliang_hu;</p>
+	                 <input type="text" placeholder="输入淘宝旺旺号" class="text-input" id="tbww-input" data-positon="0">
+	               </div>
+			         </li>              
+			       </ul>
+			     </div>
+			     <div class="operate clearfix mt18">
+			       <button class="btn-cancel btn-gray pull-right">取消</button>
+			       <button class="btn-confirm btn-blue-green mr20 pull-right">确定</button>
+			    </div> 
+			  </div>
+			</div>
+      <!-- dialog end -->
+      
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../dist/js/robot.js"></script>
+<script type="text/javascript" src="js/dialog.js"></script>
+<script type="text/javascript" src="js/widget.js"></script>
+</body>
+</html>

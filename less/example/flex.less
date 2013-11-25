@@ -1,0 +1,26 @@
+@import '../../less/core/tool-css3';
+.box {
+   /* basic styling */
+   width: 350px;
+   height: 95px;
+   border: 1px solid #555;
+   font: 14px Arial;
+ 
+   /* flexbox setup */   
+   #flexbox.display-box;
+   #flexbox.box-orient;
+ }
+ 
+ .box div {
+   #flexbox.box-flex(1);   
+   /* 动画效果 */
+   .transition(width 0.7s ease-out);
+ } 
+ /* our colors */
+ .box div:nth-child(1){ background : #FCC; }
+ .box div:nth-child(2){ background : #CFC; }
+ .box div:nth-child(3){ background : #CCF; }
+ 
+ .box div:hover { 
+   width: 200px;
+ }

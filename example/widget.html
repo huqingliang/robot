@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>栅格响应式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="robot"/>
+	<meta name="keywords" content="robot"/>
+	<link rel="stylesheet" href="../dist/css/robot.css" type="text/css"/>
+	<link rel="stylesheet" href="css/index.css" type="text/css"/>
+	<link rel="stylesheet" href="http://style.c.aliimg.com/app/dw/css/shutter/block/customized.css" type="text/css" />
+	<script type="text/javascript" src="../js/library/jquery183.js"></script>
+	<script src="http://10.20.136.137/fdevlib/js/lofty/port/lofty.js"></script>
+	<script src="../app.config.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row ">
+		<div class="span4">
+			<ul>
+				<li>
+				  <h3><a href="grid.html">栅格响应式</a></h3>
+				</li>
+				<li>
+				  <h3><a href="fulid.html">流式响应式</a></h3>
+				</li>
+				<li>
+				  <h3><a href="cssFlex.html">浮动框</a></h3>
+				</li>
+				<li>
+				  <h3><a href="widget.html">公共widget</a></h3>
+				</li>
+				<li>
+          <h3><a href="dialog.html">浮层</a></h3>
+        </li>
+			</ul>
+		</div>
+		<div class="span10 exp-layout">
+			<h4 class="title">单选菜单</h4>
+			<div id="market-dropdown" class="dropdown">                   
+         <ul id="dropdown-menu" data-target="market-data-source" class="dropdown-menu">
+           <li data-key="marketId" data-id="1000281" class="menu-item"><a class="link" href="javascript:;">[DM]会员集市</a></li>
+           <li data-key="datasourceId" data-id="1000401" class="menu-item"><a class="link" href="javascript:;">[DM]有效供应OFFER集市[DM]有效供应OFFER集市[DM]有效供应OFFER集市</a></li>
+         </ul>
+         <input type="text" id="market-data-source" class="text-input menu-value clr-mrg ft-l" data-key="marketId" data-id="1000281" value="[DM]会员集市">
+         <button type="button" class="btn" data-name="caret-down" data-names="caret-down,caret-up">
+           <span class="caret caret-down"></span>
+         </button>
+      </div>
+      <h4 class="title">单选菜单2</h4>
+      <div class="btn-group dropdown clearfix">
+         <ul id="dropdown-menu2" data-target="marketId2" class="dropdown-menu btn-group-menu">
+           <li data-id="1000281" class="menu-item"><a class="link" href="javascript:;">[DM]会员集市</a></li>
+           <li data-id="1000401" class="menu-item"><a class="link" href="javascript:;">[DM]有效供应OFFER集市[DM]有效供应OFFER集市[DM]有效供应OFFER集市</a></li>
+         </ul>
+         <input type="text" id="marketId2" class="text-input menu-value clr-mrg ft-l" data-id="1000281" value="[DM]会员集市">
+      </div>
+      
+      <h4 class="title">多选菜单1</h4>
+      <div class="btn-group multiple-dropdown">
+        <input placeholder="多项请用逗号分隔" id="t-string-dim1" class="text-input" data-id="" value="长春,长治,阜阳" data-positon="0"/>
+        <button type="button" class="btn">
+           <span class="caret caret-down"></span>
+        </button>
+        <ul id="string-dim-menu1" data-target="t-string-dim1" class="multiple-dropdown-menu btn-group-menu" style="display: none;">
+          <li data-id="镇江" class="menu-item">
+            <label for="dim-item0"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item0">镇江</p></label>
+          </li>
+          <li data-id="长春" class="menu-item">
+            <label for="dim-item1"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item1">长春</p></label>
+          </li>
+          <li data-id="长沙" class="menu-item"></label>
+            <label for="dim-item2"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item2">长沙</p></label>
+          </li>
+          <li data-id="长治" class="menu-item">
+            <label for="dim-item3"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item3">长治</p></label>
+          </li>
+          <li data-id="阜新" class="menu-item">
+            <label for="dim-item4"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item4">阜新</p></label>
+          </li>
+          <li data-id="阜阳" class="menu-item">
+            <label for="dim-item5"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item5">阜阳</p></label>
+          </li>
+        </ul>
+      </div>
+			 
+      <h4 class="title">多选菜单2</h4>
+      <div class="btn-group multiple-dropdown">
+        <input placeholder="多项请用逗号分隔" id="t-string-dim2" class="text-input" data-id="" value="" data-positon="0"/>
+        <ul id="string-dim-menu2" data-target="t-string-dim2" class="multiple-dropdown-menu" style="display: none;">
+          <li data-id="北京" class="menu-item">
+            <label for="dim-item20"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item20">北京2</p></label>
+          </li>
+          <li data-id="上海" class="menu-item">
+            <label for="dim-item21"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item21">长春</p></label>
+          </li>
+          <li data-id="长沙" class="menu-item"></label>
+            <label for="dim-item22"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item22">长沙</p></label>
+          </li>
+          <li data-id="长治" class="menu-item">
+            <label for="dim-item23"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item23">长治</p></label>
+          </li>
+          <li data-id="阜新" class="menu-item">
+            <label for="dim-item24"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item24">阜新</p></label>
+          </li>
+          <li data-id="阜阳" class="menu-item">
+            <label for="dim-item25"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item25">阜阳</p></label>
+          </li>
+        </ul>
+      </div>
+      
+      
+      
+			<dl class="widget">
+			  <dt class="title">按钮</dt>
+			  <dd>
+			     <p><button class="btn-orange">橘子红了</button></p>
+					 <p><button class="btn-blue-green">蓝绿色了</button></p>
+					 <p><button class="btn-blue-gray">蓝灰色了</button></p>
+					 <p><button class="btn-gray">啊灰色了</button></p>
+					 <p><button class="btn-blue-office">office蓝</button></p>
+			  </dd>
+               
+			</dl>
+			<dl class="widget">
+			  <dt class="title">tab</dt>
+			  <dd>
+			    <span class="ope-type" data-order="byTime">
+						<a class="link sel" data-order="byTime"><em>时间</em><i class="icon-drop-blue"></i></a>
+						<a class="link" data-order="byExportTimes"><em>导出量</em><i class="icon-drop-gray"></i></a>
+				 </span>
+			  </dd>
+			  <dd>
+			    <span class="ope-type" data-order="byTime">
+					  <a class="link sel" data-order="byTime"><em>标准模式</em></a>
+					  <a class="link" data-order="byExportTimes"><em>SQL模式</em></a>
+				 </span>
+			  </dd>
+			  <dd>
+			    <div id="pagination1" class="pagination btn-data-pagination">
+				  <ul>
+				    <li><a class="page-cell pre disabled-pre" title="上一页"></a></li>
+						<li class="active"><a class="page-cell" href="javascript:;">1</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="2">2</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="3">3</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="4">4</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="5">5</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="6">6</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="7">7</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="8">8</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="9">99</a></li>
+						<li><a class="a-link page-cell" href="javascript:;" data-page="10">1000</a></li>
+						<li class="last-child"><a type="a" href="javascript:;" data-page="2" class="a-link page-cell next" title="下一页"></a></li>
+			    </ul>
+				</div>
+			  </dd>			  
+			</dl>
+		</div>
+    <!-- second -->
+	  <div class="span10">
+	    <dl class="widget">
+        <dt class="title">icon</dt>
+        <dd>
+           <label>蓝色小箭头</label>
+           <i class="icon-blue-arraw-top"></i>
+           <i class="icon-blue-arraw-right"></i>
+           <i class="icon-blue-arraw-bottom"></i>
+           <i class="icon-blue-arraw-left"></i>
+        </dd>
+      </dl>
+      <dl class="widget">
+        <dt class="title">搜索框</dt>
+        <dd>
+          <div class="search">
+            <input type="text" placeholder="请输入搜索内容" class="text-input search-input" />
+            <i class="trash icon-trash-gray"></i>
+            <button class="btn-blue-green btn-search">搜索</button>
+          </div>
+        </dd>
+      </dl>
+	  </div>
+	</div>
+</div>
+<script type="text/javascript" src="../dist/js/robot.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+/**
+ * button.less 
+ * add by qingliang_hu 2013-10-17
+ */
+
+/** Global values */
+
+/** Grays */
+
+/** Brand colors */
+
+/** Scaffolding */
+
+/** Links */
+
+/** Components Based on 14px font-size and 1.428 line-height (~20px to start) */
+
+/** Buttons */
+
+/** Dropdowns */
+
+/** 
+ Z-index master list
+ -------------------------
+ Used for a bird's eye view of components dependent on the z-axis
+ Try to avoid customizing these :)
+*/
+
+/** Typography */
+
+/** Forms */
+
+/**
+ * robot v1.0
+ * public method and reset html
+ * reset html
+ */
+
+/* Mixins */
+
+.btn {
+  display: inline-block;
+  height: 30px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+}
+
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+     -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+         opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+/** 蓝绿 */
+
+.btn-blue-green {
+  display: inline-block;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #64b8a8;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#71c5b5), to(#64b8a8));
+  background-image: -moz-linear-gradient(#71c5b5, #64b8a8);
+  background-image: -ms-linear-gradient(#71c5b5, #64b8a8);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #71c5b5), color-stop(100%, #64b8a8));
+  background-image: -webkit-linear-gradient(#71c5b5, #64b8a8);
+  background-image: -o-linear-gradient(#71c5b5, #64b8a8);
+  background-image: linear-gradient(#71c5b5, #64b8a8);
+  background-repeat: repeat-x;
+  border: none;
+  border-bottom: 2px solid #6daba0;
+  -moz-border-radius: 2px;
+       border-radius: 2px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#71c5b5', endColorstr='#64b8a8', GradientType=0)";
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71c5b5', endColorstr='#64b8a8', GradientType=0);
+}
+
+.btn-blue-green:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+
+/** 暗灰蓝 */
+
+.btn-blue-gray {
+  display: inline-block;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #115e8a;
+  cursor: pointer;
+  background-color: #a1cfda;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#aedce7), to(#a1cfda));
+  background-image: -moz-linear-gradient(#aedce7, #a1cfda);
+  background-image: -ms-linear-gradient(#aedce7, #a1cfda);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aedce7), color-stop(100%, #a1cfda));
+  background-image: -webkit-linear-gradient(#aedce7, #a1cfda);
+  background-image: -o-linear-gradient(#aedce7, #a1cfda);
+  background-image: linear-gradient(#aedce7, #a1cfda);
+  background-repeat: repeat-x;
+  border: none;
+  border-bottom: 2px solid #b5d3da;
+  -moz-border-radius: 2px;
+       border-radius: 2px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#aedce7', endColorstr='#a1cfda', GradientType=0)";
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aedce7', endColorstr='#a1cfda', GradientType=0);
+}
+
+.btn-blue-gray:hover {
+  color: #115e8a;
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+
+/** 橙色 */
+
+.btn-orange {
+  display: inline-block;
+  height: 32px;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #f7875f;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ff8f67), to(#f7875f));
+  background-image: -moz-linear-gradient(#ff8f67, #f7875f);
+  background-image: -ms-linear-gradient(#ff8f67, #f7875f);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff8f67), color-stop(100%, #f7875f));
+  background-image: -webkit-linear-gradient(#ff8f67, #f7875f);
+  background-image: -o-linear-gradient(#ff8f67, #f7875f);
+  background-image: linear-gradient(#ff8f67, #f7875f);
+  background-repeat: repeat-x;
+  border: none;
+  border-bottom: 2px solid #da8162;
+  -moz-border-radius: 2px;
+       border-radius: 2px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8f67', endColorstr='#f7875f', GradientType=0)";
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8f67', endColorstr='#f7875f', GradientType=0);
+}
+
+.btn-orange:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+
+/** 灰色 */
+
+.btn-gray {
+  display: inline-block;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666666;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e0e0e0));
+  background-image: -moz-linear-gradient(#f7f7f7, #e0e0e0);
+  background-image: -ms-linear-gradient(#f7f7f7, #e0e0e0);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(#f7f7f7, #e0e0e0);
+  background-image: -o-linear-gradient(#f7f7f7, #e0e0e0);
+  background-image: linear-gradient(#f7f7f7, #e0e0e0);
+  background-repeat: repeat-x;
+  border: none;
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+       border-radius: 2px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e0e0e0', GradientType=0)";
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e0e0e0', GradientType=0);
+}
+
+.btn-gray:hover {
+  color: #666666;
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+
+/** 办公蓝 */
+
+.btn-blue-office {
+  display: inline-block;
+  font-size: 12px;
+  color: #115e8a;
+  background-color: #cfecf6;
+  border: 1px solid #8ec0d2;
+}

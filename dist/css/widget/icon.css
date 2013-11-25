@@ -1,0 +1,148 @@
+i {
+  display: inline-block;
+  background: url("http://img.china.alibaba.com/cms/upload/detail/idata-icon.png") no-repeat scroll 0 0 transparent;
+}
+
+/* 全屏  */
+
+.icon-full-screen {
+  width: 12px;
+  height: 12px;
+  background-position: 0 0px;
+}
+
+/* 十字架  */
+
+.icon-cross-white {
+  width: 11px;
+  height: 11px;
+  background-position: -40px 0;
+}
+
+/* 眼睛  */
+
+.icon-eye-blue {
+  width: 20px;
+  height: 12px;
+  background-position: -60px 0;
+}
+
+.icon-eye-gray {
+  width: 20px;
+  height: 12px;
+  background-position: -60px -20px;
+}
+
+/* 过滤器  */
+
+.icon-filter-show {
+  width: 16px;
+  height: 14px;
+  background-position: -85px 0;
+}
+
+.icon-filter-hide {
+  width: 16px;
+  height: 14px;
+  background-position: -85px -20px;
+}
+
+/* 日历 */
+
+.icon-date {
+  width: 17px;
+  height: 17px;
+  background-position: 0 -20px;
+}
+
+/* 导出 */
+
+.icon-export {
+  width: 16px;
+  height: 16px;
+  background-position: 0 -40px;
+}
+
+/* 列表 */
+
+.icon-list {
+  width: 16px;
+  height: 16px;
+  background-position: -20px -40px;
+}
+
+/* 垃圾箱  */
+
+.icon-trash-orange {
+  width: 16px;
+  height: 16px;
+  background-position: -40px -40px;
+}
+
+.icon-trash-blue {
+  width: 14px;
+  height: 15px;
+  background-position: -40px -60px;
+}
+
+.icon-trash-gray {
+  width: 14px;
+  height: 15px;
+  background-position: -60px -60px;
+}
+
+/* 铅笔  */
+
+.icon-pencil-orange {
+  width: 19px;
+  height: 18px;
+  background-position: -20px -20px;
+}
+
+.icon-pencil-white {
+  width: 13px;
+  height: 13px;
+  background-position: -20px 0;
+}
+
+/* 下降蓝色  */
+
+.icon-drop-blue {
+  width: 10px;
+  height: 10px;
+  background-position: 0 -60px;
+}
+
+/* 下降灰色  */
+
+.icon-drop-gray {
+  width: 10px;
+  height: 10px;
+  background-position: -20px -60px;
+}
+
+/** 上、右、下、左蓝色小箭头 */
+
+.icon-blue-arraw-top {
+  width: 7px;
+  height: 5px;
+  background-position: -20px -80px;
+}
+
+.icon-blue-arraw-right {
+  width: 5px;
+  height: 7px;
+  background-position: -40px -80px;
+}
+
+.icon-blue-arraw-bottom {
+  width: 7px;
+  height: 5px;
+  background-position: 0 -80px;
+}
+
+.icon-blue-arraw-left {
+  width: 5px;
+  height: 7px;
+  background-position: -60px -80px;
+}

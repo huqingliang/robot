@@ -1,0 +1,18 @@
+// arrow/caret
+.caret() {
+  display: inline-block;
+  border: @caret-width-base solid transparent;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  content: "";
+}
+.caret-down {
+  border-top:   @caret-width-base solid @dropdown-caret-color;
+  .caret();
+}
+.caret-up {
+  border-bottom:   @caret-width-base solid @dropdown-caret-color;
+  .caret();
+}

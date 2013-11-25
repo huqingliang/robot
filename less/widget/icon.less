@@ -1,0 +1,126 @@
+[class*="icon"] {
+  display : inline-block;
+  background : url("http://img.china.alibaba.com/cms/upload/detail/idata-icon.png") no-repeat scroll 0 0 transparent;
+}
+.icon(@width : 14px , @height : 15px , @position : -40px -60px) {
+  width : @width;
+  height : @height;
+  background-position: @position;
+}
+.loading {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0px 5px -8px 0px;
+  background: url("http://img.china.alibaba.com/cms/upload/detail/loading.gif") no-repeat scroll 0 0 transparent;
+}
+/* 全屏  */
+.icon-full-screen {
+  .icon(12px , 12px , 0px 0px);
+}
+/* 十字架  */
+.icon-cross-white {
+  .icon(11px , 11px , -40px 0px);
+}
+/* 眼睛  */
+.icon-eye-blue {
+  .icon(20px , 12px , -60px 0px);
+}
+.icon-eye-gray {
+  .icon(20px , 12px , -60px -20px);
+}
+/* 过滤器  */
+.icon-filter-show {
+  .icon(16px , 14px , -85px 0px);
+}
+.icon-filter-hide {
+  .icon(16px , 14px , -85px -20px);
+}
+/* 日历 */
+.icon-date {
+  .icon(17px , 17px , -120px -40px);
+}
+.icon-gray-date {
+  .icon(17px , 17px , 0px -20px);
+}
+/* 导出 */
+.icon-export {
+  .icon(16px , 16px , 0px -40px);
+}
+/* 列表 */
+.icon-list {
+  .icon(16px , 16px , -20px -40px);
+}
+/* 垃圾箱  */
+
+.icon-trash-gray {
+  .icon(14px , 15px , -60px -60px);
+  &:hover{
+    .icon(14px , 15px , -40px -60px);
+  }
+}
+.icon-trash-blue{
+  .icon(14px , 15px , -40px -60px);
+}
+.icon-trash-orange {
+  .icon(16px , 16px , -40px -40px);
+}
+/* 铅笔  */
+.icon-pencil-orange {
+  .icon(19px , 18px , -20px -20px);
+}
+.icon-pencil-white {
+  .icon(13px , 13px , -20px 0px);
+}
+/* 下降蓝色  */
+.icon-drop-blue {
+  .icon(10px , 10px , 0px -60px);
+}
+/* 下降灰色  */
+.icon-drop-gray {
+  .icon(10px , 10px , -20px -60px);
+}
+/** 上、右、下、左蓝色小箭头 */
+.icon-blue-arraw-top {
+  .icon(7px , 5px , -20px -80px);
+}
+.icon-blue-arraw-right {
+  .icon(5px , 7px , -40px -80px);
+}
+.icon-blue-arraw-bottom {
+  .icon(7px , 5px , 0px -80px);
+}
+.icon-blue-arraw-left {
+  .icon(5px , 7px , -60px -80px);
+}
+/** 问号 **/
+.icon-blue-qmark {
+  .icon(24px , 24px , -86px -90px);
+}
+/** 感叹号 **/
+.icon-blue-plaint{
+  .icon(24px , 24px , 0px -90px);
+}
+.icon-orange-plaint{
+  .icon(24px , 24px , -40px -90px);
+}
+/** 勾勾  **/
+.icon-blue-hook {
+  .icon(24px , 24px , -120px -90px);
+}
+/** 叉叉 **/
+.icon-white-fork {
+  .icon(10px , 10px , -40px -20px);
+}
+/** 叉叉 **/
+.icon-blue-fork {
+  .icon(10px , 10px , -85px -60px);
+}
+/** 叉叉 **/
+.icon-orange-fork {
+  .icon(10px , 10px , -60px -40px);
+}
+/** copy */
+.icon-orange-copy {
+  .icon(14px , 16px , -85px -40px);
+}

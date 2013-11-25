@@ -1,0 +1,27 @@
+
+@date-width : 200px;
+@date-input-padding : 10px;
+@date-child-width : percentage((@date-width - @date-input-padding * 2) / @date-width);
+
+// The date wrapper (div)
+.btn-date-group(@width : 200px , @input-padding : 8px) {
+  @date-width : @width;
+  @date-input-padding : @input-padding;
+  @date-child-width : percentage((@date-width - @date-input-padding * 2) / @date-width);
+  @date-width : percentage(@width / @width);
+  position: relative;
+  width: @date-width;
+  .text-input{
+    width : @date-child-width;
+    height: 28px;
+    padding : 0 @date-input-padding;
+  }
+  .btn{
+    position : absolute;
+    right : -1px;
+    top : 0px;
+    width: 12%;
+    min-width: 30px;
+    max-width: 60px;
+  }
+}

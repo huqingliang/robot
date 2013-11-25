@@ -1,0 +1,96 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+@dropdown-width : 120px;
+@dropdown-input-padding : 10px;
+@dropdown-child-width : percentage((@dropdown-width - @dropdown-input-padding * 2) / @dropdown-width);
+@border: 1px;
+// The dropdown wrapper (div)
+.btn-group(@width : 120px , @input-padding : 8px) {
+  @dropdown-width : @width;
+  @dropdown-input-padding : @input-padding;
+  @dropdown-child-width : percentage((@dropdown-width - @dropdown-input-padding * 2 - @border * 2) / @dropdown-width);
+  position: relative;
+  width: @dropdown-width;
+  .text-input{
+    width : @dropdown-child-width;
+    height: 28px;
+    padding : 0 @dropdown-input-padding;
+  }
+  .btn{
+    position : absolute;
+    right : 0px;
+    top : 0px;
+    width: 12%;
+    min-width: 30px;
+    max-width: 60px;
+    &:hover{
+      background-color: #f9f9f9;
+    }
+  }
+}
+.dropdown{
+  .btn-group();
+  // The dropdown menu (ul)
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: @zindex-dropdown;
+    display: none; // none by default, but block on "open" of the menu
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+    
+    list-style: none;
+    font-size: @font-size-base;
+    background-color: @dropdown-bg;
+    border: 1px solid @dropdown-fallback-border; // IE8 fallback
+    border: 1px solid @dropdown-border;
+    border-top: 0;
+  
+    // Aligns the dropdown menu to right
+    &.pull-right {
+      right: 0;
+      left: auto;
+    }
+  
+    // Dividers (basically an hr) within the dropdown
+    .divider {
+      .nav-divider(@dropdown-divider-bg);
+    }
+    li{
+      width : 100%;
+    }
+  
+    // Links within the dropdown menu
+    > li > .link {
+      display: block;
+      padding: 4px @dropdown-input-padding;
+      line-height: 20px;
+      clear: both;
+      font-weight: normal;
+      color: @dropdown-link-color;
+    }
+  }
+}
+
+
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+
+// Hover/Focus state
+.dropdown-menu > li > .link {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: @dropdown-link-hover-color;
+    background-color: @dropdown-link-hover-bg;
+  }
+}
+

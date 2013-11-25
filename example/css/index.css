@@ -1,0 +1,34 @@
+.exp-layout .row,
+.exp-layout .row-fluid{
+	margin: 12px 0;
+}
+.exp-layout .row [class*="span"],
+.exp-layout .row-fluid [class*="span"]{
+  background-color:#ccc;
+  text-align: center;
+}
+.exp-layout [class*="span"]:hover{
+  background-color:#ff7300;
+}
+.title{
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+}
+dl dd{
+	margin: 8px 0;
+}
+.widget{
+  margin: 12px 0;
+}
+.widget p{
+  margin: 4px 0;
+}
+.btn-group{
+	width: 200px;
+}
+.trash{
+  position: absolute;
+	top: 8px;
+	right: 54px;
+}

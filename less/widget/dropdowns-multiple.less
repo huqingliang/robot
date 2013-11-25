@@ -1,0 +1,195 @@
+/**
+ * multiple-dropdown.css 
+ * add by qingliang_hu 2013-09-11
+
+.multiple-dropdown{
+  .btn-group();
+}
+
+.multiple-dropdown .text-input:after{
+  border: 0;
+  content: "";
+  top: 100%;
+  width: 100%;
+} 
+// The multiple-dropdown menu (ul)
+.multiple-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: @zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  
+  padding: 5px 0;
+  width: @dropdown-width;
+  max-height: 300px;
+  overflow-y: auto;
+  
+  font-size: @font-size-base;
+  background-color: @dropdown-bg;
+  border: 1px solid @dropdown-fallback-border; // IE8 fallback
+  border: 1px solid @dropdown-border;
+  border-top: 0;
+
+  // Aligns the dropdown menu to right
+  &.pull-right {
+    right: 0;
+    left: auto;
+  }
+
+  // Dividers (basically an hr) within the dropdown
+  .divider {
+    .nav-divider(@dropdown-divider-bg);
+  }
+
+  // Links within the dropdown menu
+  .menu-item  .link{
+    display: block;
+    padding: 3px 10px;
+    clear: both;    
+    line-height: @line-height-base;    
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    .mutil{
+      position : relative;
+      top : 2px;
+      margin-right : 4px;
+    }
+  }
+  .menu-item .link:hover{
+    color: @dropdown-link-hover-color;
+    background-color: @dropdown-link-hover-bg;
+  }
+}
+
+
+// Open state for the dropdown
+.open {
+  // Show the menu
+  > .multiple-dropdown-menu {
+    display: block;
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
+
+// Dropdown section headers
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: @font-size-small;
+  line-height: @line-height-base;
+  color: @dropdown-header-color;
+}
+
+// Backdrop to catch body clicks on mobile, etc.
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: @zindex-dropdown - 10;
+}
+
+// Right aligned dropdowns
+.pull-right > .multiple-dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+//
+// Just add .dropup after the standard .dropdown class and you're set, bro.
+// TODO: abstract this so that the navbar fixed styles are not placed here?
+.dropup,
+.multiple-dropdown {
+  position: relative;
+  
+  // Different positioning for bottom up menu
+  .multiple-dropdown-menu {
+    top: 100%;
+    margin-bottom: 1px;
+	  .menu-item:hover{
+	    background-color: @link-hover-color;
+	  }
+  }
+}
+
+ */
+ //
+// Dropdown menus
+// --------------------------------------------------
+
+.multiple-dropdown{
+  .btn-group();
+  // The dropdown menu (ul)
+  .multiple-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: @zindex-dropdown;
+    display: none; // none by default, but block on "open" of the menu
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+    
+    list-style: none;
+    font-size: @font-size-base;
+    background-color: @dropdown-bg;
+    border: 1px solid @dropdown-fallback-border; // IE8 fallback
+    border: 1px solid @dropdown-border;
+    border-top: 0;
+  
+    // Aligns the dropdown menu to right
+    &.pull-right {
+      right: 0;
+      left: auto;
+    }
+  
+    // Dividers (basically an hr) within the dropdown
+    .divider {
+      .nav-divider(@dropdown-divider-bg);
+    }
+    // Links within the dropdown menu
+    .menu-item  .link{
+      display: block;
+      padding: 3px 10px;
+      clear: both;    
+      line-height: @line-height-base;    
+      white-space: nowrap; // prevent links from randomly breaking onto new lines
+      .mutil{
+        position : relative;
+        top : 2px;
+        margin-right : 4px;
+      }
+    }
+    .menu-item .link:hover{
+      color: @dropdown-link-hover-color;
+      background-color: @dropdown-link-hover-bg;
+    }
+  }
+}
+
+
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+
+// Hover/Focus state
+.multiple-dropdown-menu > li > .link {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: @dropdown-link-hover-color;
+    background-color: @dropdown-link-hover-bg;
+  }
+}
+
+ 
