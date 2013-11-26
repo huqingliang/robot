@@ -1,59 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8"/>
-<title>index</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="robot"/>
-<meta name="keywords" content="robot"/>
-<link rel="stylesheet" href="../dist/css/robot.css" type="text/css"/>
-<link rel="stylesheet" href="css/index.css" type="text/css"/>
+  <meta charset="UTF-8"></meta>
+  <meta charset="Content-type: application/x-www-form-urlencoded; charset=UTF-8" />
+
+  <title>机器人</title>
+  <meta name="viewport"content="target-densitydpi=device-dpi,width=device-width" />
+  <meta name="description" content="前端 机器人 robot pretty dropdown navs page" />
+  <meta name="keywords" content="前端 机器人 robot pretty dropdown navs page" />
+  <link rel="stylesheet" href="http://style.c.aliimg.com/app/dw/css/idata/global/toolhandler.css" type="text/css"/>
+  <!-- YOUR CODE START-->
+  <link rel="stylesheet" href="../dist/css/robot.css" type="text/css"/>
+  <link rel="stylesheet" href="css/index.css" type="text/css"/>
+  <script type="text/javascript" src="../js/library/jquery183.js"></script>
+  <script src="http://style.c.aliimg.com/fdevlib/js/lofty/port/lofty.js"></script>
+  <script src="../app.config.js"></script>
+  <!-- YOUR CODE END-->
+  <script type="text/javascript" src="http://style.c.aliimg.com/app/dw/js/idata/global/toolhandler.js" charset="UTF-8"></script>
 </head>
 <body>
-<div class="container-fluid">
-	<div class="row-fluid ">
-		<div class="span4">
-			<ul>
-        <li>
-          <h3><a href="grid.html">栅格响应式</a></h3>
-        </li>
-        <li>
-          <h3><a href="fulid.html">流式响应式</a></h3>
-        </li>
-        <li>
-          <h3><a href="cssFlex.html">浮动框</a></h3>
-        </li>
-        <li>
-          <h3><a href="widget.html">公共widget</a></h3>
-        </li>
-        <li>
-          <h3><a href="dialog.html">浮层</a></h3>
-        </li>
-      </ul>
-		</div>
-		<div class="span20">
-		    <details>
-				<summary>robot</summary>
-				<blockquote><img alt="" src="../doc/photoDoc/robot.jpg"></blockquote>
-			</details>
-			<details>
-				<summary>robot 项目计划</summary>
-				<img alt="" src="../doc/photoDoc/robot项目计划.jpg">
-			</details>
-			<details>
-				<summary>robot 时间表</summary>
-				<img alt="" src="../doc/photoDoc/robot时间表.jpg">
-			</details>
-			<details>
-				<summary>robot 工程目录</summary>
-				<img alt="project" src="../doc/photoDoc/project.jpg">
-			</details>
-		</div>
-	</div>
-	<footer class="row-fluid ">This document was written in 2013, Author huqingliang</footer>
+<!-- 左右布局：i-around-module，上下布局：i-updown-module  -->
+<div class="i-around-module">
+  <!-- idataNavigate 导航 -->
+  <div id="idata-navigate" data-username="胡清亮">
+    <div id="i-navigate-min" class="i-navigate-min" data-type="open">
+        <span id="i-open" class="i-open switch-nav" data-type="open"></span>
+        <span class="guide">导航</span>
+    </div>
+    
+    <div id="i-navigate" class="i-navigate" data-type="close">
+        <span id="i-close" class="i-close switch-nav" data-type="close"></span>
+        <div class="nav-data">
+            <div class="obj-logo">
+                <i class="i-alibaba-logo d-links" data-url="http://idata.alibaba-inc.com"></i>
+                <h4 class="d-links" data-url="http://idata.alibaba-inc.com">傻瓜数据平台</h4>
+                <!-- <em class="beta">Beta</em> -->
+            </div>
+            <div class="obj-search">
+                <form name="pageSubmitForm" id="pageSubmitForm" method="post" calss="fd-hide">
+                  <input type="hidden" name="categoryId" value="">
+                  <input type="hidden" name="keyword" value="">
+                  <input type="hidden" name="pageNo" value="">
+                  <input type="hidden" name="type" value="">
+                  <input type="hidden" name="_input_charset" value="UTF-8">
+                </form>
+                <input class="search-input" value="" data-url="http://idata.alibaba-inc.com/search/search.htm" type="text"/>
+                <i class="i-search"></i>
+            </div>
+            <ul class="obj-tree">   
+                <li class="item i-robot-index">
+                    <em class="word cate d-links" data-url="index.html">robot机器人</em>     
+                </li>         
+                <li class="item i-grid">
+                    <em class="word cate d-links" data-url="grid.html">栅格布局</em>     
+                </li>
+                <li class="item i-fulid">
+                    <em class="word cate d-links" data-url="fulid.html">流式响应式</em>    
+                </li>
+                <li class="item i-widget">
+                    <em class="word cate d-links" data-url="widget.html">公共widget</em>    
+                </li>
+                <li class="item i-dialog">
+                    <em class="word cate d-links" data-url="dialog.html">浮层</em>    
+                </li>
+                <li class="item i-fulid-container">
+                    <em class="word cate d-links" data-url="cssFlex.html">浮动框</em>    
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <div id="i-body" class="i-body ml20">
+    <!----------------------------------- your code start --------------------------------->
+    <div class="container-fluid idata-nav-cur mt20" data-current="i-robot-index">
+      <div class="row-fluid">
+        <div class="span24">
+          <ul class="nav nav-tabs">
+               <li class="active item tab-data-preview" data-target=".robot-home" clickcount="false">
+                 <a class="tab">robot</a>
+               </li>
+               <li class="item tab-data-preview" data-target=".robot-product" clickcount="false">
+                 <a class="tab">robot 项目计划</a>
+               </li>
+               <li class="item tab-report-detail" data-target=".robot-timing" clickcount="false">
+                 <a class="tab">robot 时间表</a>
+               </li>
+               <li class="item tab-report-sql" data-target=".robot-src" clickcount="false">
+                 <a class="tab">robot 工程目录</a>
+               </li>
+            </ul>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span24">
+	        <details class="robot-home" open>
+	          <summary>robot</summary>
+		        <blockquote><img alt="" src="../doc/photoDoc/robot.jpg"></blockquote>
+		      </details>
+		      <details class="robot-product hide" open>
+		        <summary>robot 项目计划</summary>
+		        <img alt="" src="../doc/photoDoc/robot项目计划.jpg">
+		      </details>
+		      <details class="robot-timing hide" open>
+		        <summary>robot 时间表</summary>
+		        <img alt="" src="../doc/photoDoc/robot时间表.jpg">
+		      </details>
+		      <details class="robot-src hide" open>
+		        <summary>robot 工程目录</summary>
+		        <img alt="project" src="../doc/photoDoc/project.jpg">
+		      </details>
+	    </div>
+      </div>
+    </div>
+    <!--------------------------------- your code end --------------------------------->
+  </div>
 </div>
-<script type="text/javascript" src="../sea-modules/js/seajs/sea-debug.js"></script>
-<script type="text/javascript" src="../sea-config.js"></script>
-<script>seajs.use('../test.js');</script>
+<script type="text/javascript" src="../dist/js/robot.js"></script>
+<script type="text/javascript" src="js/widget.js"></script>
 </body>
 </html>

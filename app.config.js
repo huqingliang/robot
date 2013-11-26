@@ -15,6 +15,7 @@
 			'RobotPage' : 'library/widget/robot/robot-page',
 			'RobotTooltip' : 'library/widget/robot/robot-tooltip',
 		  'jquery' : 'library/jquery183',
+		  'WdatePicker' : 'library/my97-date-picker/wdate-picker'
     },
 
 		amd : true,

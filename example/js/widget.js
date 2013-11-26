@@ -1,13 +1,13 @@
 define(["require",
 		 "exports",
-		 "RobotTab",
+		 "RobotNavs",
 		 "RobotDropdown",
 		 "RobotDialog",
 		 "RobotPage"], 		
 	function(
 		require,
 		exports,
-		RobotTab,
+		RobotNavs,
 		RobotDropdown,
 		RobotDialog,
 		RobotPage){
@@ -47,13 +47,6 @@ define(["require",
 	};
 	initDropdown();
 	var event = function(){
-		/* 排序搜索 $this 当前节点对象 */
-		var tab1 = new RobotTab({
-			
-		});
-		tab1.on("switch",function(obj){
-			console.log(obj);
-		});
 		
 		/* dropdown */
 		var dropdown1 = new RobotDropdown();
