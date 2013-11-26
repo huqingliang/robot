@@ -63,12 +63,50 @@
         <dd>
           <button id="define-del" data-target-dialog="define-del-dialog" class="btn-blue-green">删除报表</button>
         </dd>
+        <dd>
+        <details>
+          <summary class="title">使用方法：</summary>
+          <p>浮层触发源：&lt;button id="define-del" data-target-dialog="define-del-dialog" class="btn-blue-green"&gt;删除报表&lt;button&gt;</p>
+          <p>要打开的浮层：data-target-dialog="define-del-dialog"  </p>
+          <p>define-del-dialog是要打开的浮层id</p>
+          <h3>JS：</h3>
+          <textarea style="width:100%;height:200px">
+          define(["RobotDialog","jquery"],function(RobotDialog,$){
+
+  var defaultOpts = {};
+  
+  var YourModuleName = function(){
+  this.opts = $.extend({},defaultOpts,opts);
+  this.initDialog();
+  }
+  var fn = YourModuleName.prototype;
+  
+  fn.initDialog = function(){
+  /* define-my-report 点击能出现浮层的按钮事件 */
+    var dialogId = $("#define-del").data("target-dialog");
+    var dialogDel = new RobotDialog({
+    dialogBox : "#" + dialogId
+    });
+  $("#define-del").on("click",function(e){
+      dialogDel.openDialog();
+  });
+    dialogDel.on("confirm",function(obj){
+    dialogDel.closeDialog();
+    });          
+  };
+  $(document).ready(funciton(){
+  new YourModuleName();
+  });
+  
+});
+          </textarea>
+	       </details>
+        </dd>
       </dl>
       <dl class="widget">
         <dt class="title">浮层2</dt>
         <dd>
           <button id="define-my-report" data-target-dialog="define-report-dialog" class="btn-blue-green">点我出现浮层</button>
-          <textarea id="test-area" rows="" cols=""></textarea>
         </dd>
       </dl>
       <!-- dialog start -->
@@ -94,7 +132,7 @@
 			  </div>
 			</div>
 			<!-- my-report -->
-			<div id="define-report-dialog" class="robot-dialog report-dialog">
+			<div id="define-report-dialog" class="robot-dialog report-dialog hide">
 			  <div class="d-header clearfix">
 			     <h3 class="font14 pull-left">我要定制</h3>
 			     <i class="icon-white-fork btn-cancel pull-right"></i>

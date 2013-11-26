@@ -14,8 +14,8 @@
 	<script src="../app.config.js"></script>
 </head>
 <body>
-<div class="container">
-	<div class="row ">
+<div class="container-fluid">
+	<div class="row-fluid">
 		<div class="span4">
 			<ul>
 				<li>
@@ -36,138 +36,353 @@
 			</ul>
 		</div>
 		<div class="span10 exp-layout">
-			<h4 class="title">单选菜单</h4>
-			<div id="market-dropdown" class="dropdown">                   
-         <ul id="dropdown-menu" data-target="market-data-source" class="dropdown-menu">
-           <li data-key="marketId" data-id="1000281" class="menu-item"><a class="link" href="javascript:;">[DM]会员集市</a></li>
-           <li data-key="datasourceId" data-id="1000401" class="menu-item"><a class="link" href="javascript:;">[DM]有效供应OFFER集市[DM]有效供应OFFER集市[DM]有效供应OFFER集市</a></li>
-         </ul>
-         <input type="text" id="market-data-source" class="text-input menu-value clr-mrg ft-l" data-key="marketId" data-id="1000281" value="[DM]会员集市">
-         <button type="button" class="btn" data-name="caret-down" data-names="caret-down,caret-up">
-           <span class="caret caret-down"></span>
-         </button>
-      </div>
-      <h4 class="title">单选菜单2</h4>
-      <div class="btn-group dropdown clearfix">
-         <ul id="dropdown-menu2" data-target="marketId2" class="dropdown-menu btn-group-menu">
-           <li data-id="1000281" class="menu-item"><a class="link" href="javascript:;">[DM]会员集市</a></li>
-           <li data-id="1000401" class="menu-item"><a class="link" href="javascript:;">[DM]有效供应OFFER集市[DM]有效供应OFFER集市[DM]有效供应OFFER集市</a></li>
-         </ul>
-         <input type="text" id="marketId2" class="text-input menu-value clr-mrg ft-l" data-id="1000281" value="[DM]会员集市">
-      </div>
-      
-      <h4 class="title">多选菜单1</h4>
-      <div class="btn-group multiple-dropdown">
-        <input placeholder="多项请用逗号分隔" id="t-string-dim1" class="text-input" data-id="" value="长春,长治,阜阳" data-positon="0"/>
-        <button type="button" class="btn">
-           <span class="caret caret-down"></span>
-        </button>
-        <ul id="string-dim-menu1" data-target="t-string-dim1" class="multiple-dropdown-menu btn-group-menu" style="display: none;">
-          <li data-id="镇江" class="menu-item">
-            <label for="dim-item0"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item0">镇江</p></label>
-          </li>
-          <li data-id="长春" class="menu-item">
-            <label for="dim-item1"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item1">长春</p></label>
-          </li>
-          <li data-id="长沙" class="menu-item"></label>
-            <label for="dim-item2"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item2">长沙</p></label>
-          </li>
-          <li data-id="长治" class="menu-item">
-            <label for="dim-item3"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item3">长治</p></label>
-          </li>
-          <li data-id="阜新" class="menu-item">
-            <label for="dim-item4"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item4">阜新</p></label>
-          </li>
-          <li data-id="阜阳" class="menu-item">
-            <label for="dim-item5"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item5">阜阳</p></label>
-          </li>
-        </ul>
-      </div>
-			 
-      <h4 class="title">多选菜单2</h4>
-      <div class="btn-group multiple-dropdown">
-        <input placeholder="多项请用逗号分隔" id="t-string-dim2" class="text-input" data-id="" value="" data-positon="0"/>
-        <ul id="string-dim-menu2" data-target="t-string-dim2" class="multiple-dropdown-menu" style="display: none;">
-          <li data-id="北京" class="menu-item">
-            <label for="dim-item20"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item20">北京2</p></label>
-          </li>
-          <li data-id="上海" class="menu-item">
-            <label for="dim-item21"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item21">长春</p></label>
-          </li>
-          <li data-id="长沙" class="menu-item"></label>
-            <label for="dim-item22"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item22">长沙</p></label>
-          </li>
-          <li data-id="长治" class="menu-item">
-            <label for="dim-item23"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item23">长治</p></label>
-          </li>
-          <li data-id="阜新" class="menu-item">
-            <label for="dim-item24"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item24">阜新</p></label>
-          </li>
-          <li data-id="阜阳" class="menu-item">
-            <label for="dim-item25"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item25">阜阳</p></label>
-          </li>
-        </ul>
-      </div>
+		<details>
+		  <summary class="title">单选菜单</summary>
+		  <div id="market-dropdown" class="dropdown">                   
+			 <ul id="dropdown-menu" data-target="market-data-source" class="dropdown-menu">
+			   <li data-key="marketId" data-id="1000281" class="menu-item"><a class="link" href="javascript:;">[DM]会员集市</a></li>
+			   <li data-key="datasourceId" data-id="1000401" class="menu-item"><a class="link" href="javascript:;">[DM]有效供应OFFER集市[DM]有效供应OFFER集市[DM]有效供应OFFER集市</a></li>
+			 </ul>
+			 <input type="text" id="market-data-source" class="text-input menu-value clr-mrg ft-l" data-key="marketId" data-id="1000281" value="[DM]会员集市">
+			 <button type="button" class="btn" data-name="caret-down" data-names="caret-down,caret-up">
+			   <span class="caret caret-down"></span>
+			 </button>
+		  </div>
+		  <h3 class="title">JS源码，如果需要监听选择返回结果可以这么做，否则下面的JS不需要写：</h3>
+      <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+      define(["RobotDropdown","jquery"],function(RobotDropdown,$){
+
+        var defaultOpts = {};
+        
+        var YourModuleName = function(){
+	        this.opts = $.extend({},defaultOpts,opts);
+	        this.initDropdown();
+        };
+        var fn = YourModuleName.prototype;
+        
+        fn.initDropdown = function(){
+          // 多选下拉菜单
+          var _multiDrop = new RobotDropdown({
+	          pEle : "#market-dropdown"
+	        });
+	        // 监听下拉列表选择
+	        _multiDrop.on("switch",function(obj){
+	          // obj :{ $this : $input,e : e}
+	          console.log(obj);
+	        });
+        };
+        $(document).ready(funciton(){
+          new YourModuleName();
+        });
+        
+      });
+      </textarea>
+		  <h3 class="title">HTML源码：</h3>
+		   <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+		    <div id="market-dropdown" class="dropdown">                   
+				 <ul id="dropdown-menu" data-target="market-data-source" class="dropdown-menu">
+				   <li data-key="marketId" data-id="1000281" class="menu-item"><a class="link" href="javascript:;">[DM]会员集市</a></li>
+				   <li data-key="datasourceId" data-id="1000401" class="menu-item"><a class="link" href="javascript:;">[DM]有效供应OFFER集市[DM]有效供应OFFER集市[DM]有效供应OFFER集市</a></li>
+				 </ul>
+				 <input type="text" id="market-data-source" class="text-input menu-value clr-mrg ft-l" data-key="marketId" data-id="1000281" value="[DM]会员集市">
+				 <button type="button" class="btn" data-name="caret-down" data-names="caret-down,caret-up">
+				   <span class="caret caret-down"></span>
+				 </button>
+			  </div>
+		   </textarea>
+	  </details>
       
       
-      
-			<dl class="widget">
-			  <dt class="title">按钮</dt>
-			  <dd>
-			     <p><button class="btn-orange">橘子红了</button></p>
-					 <p><button class="btn-blue-green">蓝绿色了</button></p>
-					 <p><button class="btn-blue-gray">蓝灰色了</button></p>
-					 <p><button class="btn-gray">啊灰色了</button></p>
-					 <p><button class="btn-blue-office">office蓝</button></p>
-			  </dd>
-               
-			</dl>
-			<dl class="widget">
-			  <dt class="title">tab</dt>
-			  <dd>
-			    <span class="ope-type" data-order="byTime">
-						<a class="link sel" data-order="byTime"><em>时间</em><i class="icon-drop-blue"></i></a>
-						<a class="link" data-order="byExportTimes"><em>导出量</em><i class="icon-drop-gray"></i></a>
-				 </span>
-			  </dd>
-			  <dd>
-			    <span class="ope-type" data-order="byTime">
-					  <a class="link sel" data-order="byTime"><em>标准模式</em></a>
-					  <a class="link" data-order="byExportTimes"><em>SQL模式</em></a>
-				 </span>
-			  </dd>
-			  <dd>
-			    <div id="pagination1" class="pagination btn-data-pagination">
-				  <ul>
-				    <li><a class="page-cell pre disabled-pre" title="上一页"></a></li>
-						<li class="active"><a class="page-cell" href="javascript:;">1</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="2">2</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="3">3</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="4">4</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="5">5</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="6">6</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="7">7</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="8">8</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="9">99</a></li>
-						<li><a class="a-link page-cell" href="javascript:;" data-page="10">1000</a></li>
-						<li class="last-child"><a type="a" href="javascript:;" data-page="2" class="a-link page-cell next" title="下一页"></a></li>
-			    </ul>
-				</div>
-			  </dd>			  
-			</dl>
+      <details>
+		  <summary class="title">多选菜单</summary>
+		  <div class="btn-group multiple-dropdown">
+			<input placeholder="多项请用逗号分隔" id="t-string-dim1" class="text-input" data-id="" value="长春,长治,阜阳" data-positon="0"/>
+			<button type="button" class="btn">
+			   <span class="caret caret-down"></span>
+			</button>
+			<ul id="string-dim-menu1" data-target="t-string-dim1" class="multiple-dropdown-menu btn-group-menu" style="display: none;">
+			  <li data-id="镇江" class="menu-item">
+				<label for="dim-item0"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item0">镇江</p></label>
+			  </li>
+			  <li data-id="长春" class="menu-item">
+				<label for="dim-item1"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item1">长春</p></label>
+			  </li>
+			  <li data-id="长沙" class="menu-item"></label>
+				<label for="dim-item2"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item2">长沙</p></label>
+			  </li>
+			  <li data-id="长治" class="menu-item">
+				<label for="dim-item3"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item3">长治</p></label>
+			  </li>
+			  <li data-id="阜新" class="menu-item">
+				<label for="dim-item4"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item4">阜新</p></label>
+			  </li>
+			  <li data-id="阜阳" class="menu-item">
+				<label for="dim-item5"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item5">阜阳</p></label>
+			  </li>
+			</ul>
+		  </div>
+		  <h3 class="title">JS源码，如果需要监听选择返回结果可以这么做，否则下面的JS不需要写：</h3>
+      <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+      define(["RobotDropdown","jquery"],function(RobotDropdown,$){
+
+			  var defaultOpts = {};
+			  
+			  var YourModuleName = function(){
+			  this.opts = $.extend({},defaultOpts,opts);
+			  this.initDropdown();
+			  }
+			  var fn = YourModuleName.prototype;
+			  
+			  fn.initDropdown = function(){
+			  // 多选下拉菜单
+			    var _multiDrop = new RobotDropdown({
+			    pEle : "#mutl-city1"
+			  });
+			  _multiDrop.on("switch",function(obj){
+			    // obj :{ $this : $input,e : e}
+			    console.log(obj);
+			  });
+			  };
+			  $(document).ready(funciton(){
+			  new YourModuleName();
+			  });
+			  
+			});
+      </textarea>
+		   <h3 class="title">HTML源码：</h3>
+		   <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+		    <div id="mutl-city1" class="btn-group multiple-dropdown">
+					<input placeholder="多项请用逗号分隔" id="t-string-dim1" class="text-input" data-id="" value="长春,长治,阜阳" data-positon="0"/>
+					<button type="button" class="btn">
+					   <span class="caret caret-down"></span>
+					</button>
+					<ul id="string-dim-menu1" data-target="t-string-dim1" class="multiple-dropdown-menu btn-group-menu" style="display: none;">
+					  <li data-id="镇江" class="menu-item">
+						<label for="dim-item0"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item0">镇江</p></label>
+					  </li>
+					  <li data-id="长春" class="menu-item">
+						<label for="dim-item1"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item1">长春</p></label>
+					  </li>
+					  <li data-id="长沙" class="menu-item"></label>
+						<label for="dim-item2"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item2">长沙</p></label>
+					  </li>
+					  <li data-id="长治" class="menu-item">
+						<label for="dim-item3"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item3">长治</p></label>
+					  </li>
+					  <li data-id="阜新" class="menu-item">
+						<label for="dim-item4"><p class="link"><input class="mutil" type="checkbox" name="dim-item" id="dim-item4">阜新</p></label>
+					  </li>
+					  <li data-id="阜阳" class="menu-item">
+						<label for="dim-item5"><p class="link"><input class="mutil" type="checkbox" name="dim-item" checked="checked" id="dim-item5">阜阳</p></label>
+					  </li>
+					</ul>
+			  </div>
+		  </textarea>
+	  </details>
+		 
+       
+      <details>
+	    <summary class="title">按钮组</summary>
+		<dl class="widget">		  
+		  <dd>
+			 <button class="btn-orange">橘子红了</button>
+			 <button class="btn-blue-green">蓝绿色了</button>
+			 <button class="btn-blue-gray">蓝灰色了</button>
+			 <button class="btn-gray">啊灰色了</button>
+			 <button class="btn-white">白色</button>
+			 <button class="btn-blue-office">office蓝</button>
+		  </dd>     
+      <dd>
+		   <h3 class="title">源码：</h3>
+		   <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px"><button class="btn-orange">橘子红了</button>
+		   <button class="btn-blue-green">蓝绿色了</button>
+		   <button class="btn-blue-gray">蓝灰色了</button>
+		   <button class="btn-gray">啊灰色了</button>
+		   <button class="btn-white">白色</button>
+		   <button class="btn-blue-office">office蓝</button></textarea>
+      </dd>          
+		</dl>
+	</details>
+	 <details>
+	    <summary class="title">tab</summary>
+		<dl class="widget">		  
+		  <dd>
+			<span class="ope-type" data-order="byTime">
+				<a class="link sel" data-order="byTime"><em>时间</em><i class="icon-drop-blue"></i></a>
+				<a class="link" data-order="byExportTimes"><em>导出量</em><i class="icon-drop-gray"></i></a>
+			 </span>
+		  </dd>
+		  <dd>
+			<span class="ope-type" data-order="byTime">
+			  <a class="link sel" data-order="byTime"><em>标准模式</em></a>
+			  <a class="link" data-order="byExportTimes"><em>SQL模式</em></a>
+			 </span>
+		  </dd>	  
+		</dl>
+		<h3 class="title">源码</h3>
+		<textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+		<span class="ope-type" data-order="byTime">
+			<a class="link sel" data-order="byTime"><em>时间</em><i class="icon-drop-blue"></i></a>
+			<a class="link" data-order="byExportTimes"><em>导出量</em><i class="icon-drop-gray"></i></a>
+		 </span>
+		</textarea>
+		<textarea wrap="soft" spellcheck="false" style="width:100%;height:100px">
+		 <span class="ope-type" data-order="byTime">
+		  <a class="link sel" data-order="byTime"><em>标准模式</em></a>
+		  <a class="link" data-order="byExportTimes"><em>SQL模式</em></a>
+		 </span>
+		</textarea>
+	</details>
+	<details>
+	  <summary class="title">分页</summary>
+		<div id="pagination1" class="pagination clearfix">
 		</div>
+		<h3 class="title">JS源码：</h3>
+		<textarea style="width:100%;height:300px">
+		  define(["RobotPage","jquery"],function(RobotPage,$){
+
+			  var defaultOpts = {};
+			  
+			  var YourModuleName = function(){
+			  this.opts = $.extend({},defaultOpts,opts);
+			  this.initModule();
+			  }
+			  var fn = YourModuleName.prototype;
+			  
+			  var initModule = function(){
+			    // 分页
+			    var _pagePreview = new RobotPage({
+			      pagination : "#pagination1"
+			    });
+			    _pagePreview.renderPage({
+			      currentPage : 2,
+			      pageSize : 10,
+			      totalPage : 14
+			    });
+		      $("#pagination1").delegate(".page-cell","click",function(){
+			      var page = $(this).data("page");
+			      if(page){
+			        /**
+		           * 渲染分页层
+		           * @param  p (后台返回的page对象)
+		           * {
+		           *   currentPage: 6  //当前页，必选
+		           *   pageSize: 10    //显示多少个tab，必选 
+		           *   totalPage: 14   //总页数，必选
+		           *   total: 136      //总条数，可选
+		           * }
+		           */
+			        _pagePreview.renderPage({
+			          currentPage : page,
+			          pageSize : 10,
+			          totalPage : 14
+			        });
+			      }
+			    });
+			  };
+			  $(document).ready(funciton(){
+			   new YourModuleName();
+			  });
+			  
+			});
+		</textarea>
+		<h3 class="title">HTML源码：</h3>
+		<textarea wrap="soft" spellcheck="false" style="width:100%;height:60px">
+			<div id="pagination1" class="pagination btn-data-pagination"></div>
+		</textarea>
+	</details>
+	</div>
     <!-- second -->
 	  <div class="span10">
+	    <details>
+	    <summary class="title">icon</summary>
 	    <dl class="widget">
-        <dt class="title">icon</dt>
         <dd>
-           <label>蓝色小箭头</label>
-           <i class="icon-blue-arraw-top"></i>
-           <i class="icon-blue-arraw-right"></i>
-           <i class="icon-blue-arraw-bottom"></i>
-           <i class="icon-blue-arraw-left"></i>
+          <i class="loading"></i>
+          <i class="icon-full-screen"></i>
+          <i class="icon-cross-white"></i>
+          <i class="icon-eye-blue"></i>
+          <i class="icon-eye-gray"></i>
+          <i class="icon-filter-show"></i>
+          <i class="icon-filter-hide"></i>
+        </dd>
+        <dd>
+         <h3 class="title">源码：</h3>
+         <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+          <i class="loading"></i>
+          <i class="icon-full-screen"></i>
+          <i class="icon-cross-white"></i>
+          <i class="icon-eye-blue"></i>
+          <i class="icon-eye-gray"></i>
+          <i class="icon-filter-show"></i>
+          <i class="icon-filter-hide"></i>
+         </textarea>
+        </dd>
+        <dd class="mt10">
+          <i class="icon-date"></i>
+          <i class="icon-gray-date"></i>
+          <i class="icon-export"></i>
+          <i class="icon-list"></i>
+          <i class="icon-trash-gray"></i>
+          <i class="icon-trash-blue"></i>
+          <i class="icon-trash-orange"></i>
+        </dd>
+        <dd>
+         <h3 class="title">源码：</h3>
+         <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+          <i class="icon-date"></i>
+          <i class="icon-gray-date"></i>
+          <i class="icon-export"></i>
+          <i class="icon-list"></i>
+          <i class="icon-trash-gray"></i>
+          <i class="icon-trash-blue"></i>
+          <i class="icon-trash-orange"></i>
+         </textarea>
+        </dd>
+        <dd class="mt10">
+          <i class="icon-pencil-orange"></i>
+          <i class="icon-pencil-white"></i>
+          <i class="icon-drop-blue"></i>
+          <i class="icon-drop-gray"></i>
+          <i class="icon-blue-arraw-top"></i>
+          <i class="icon-blue-arraw-right"></i>
+          <i class="icon-blue-arraw-bottom"></i>
+          <i class="icon-blue-arraw-left"></i>
+        </dd>
+        <dd>
+         <h3 class="title">源码：</h3>
+         <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+          <i class="icon-pencil-orange"></i>
+          <i class="icon-pencil-white"></i>
+          <i class="icon-drop-blue"></i>
+          <i class="icon-drop-gray"></i>
+          <i class="icon-blue-arraw-top"></i>
+          <i class="icon-blue-arraw-right"></i>
+          <i class="icon-blue-arraw-bottom"></i>
+          <i class="icon-blue-arraw-left"></i>
+         </textarea>
+        </dd>
+        <dd class="mt10">
+          <i class="icon-blue-qmark"></i>
+          <i class="icon-blue-plaint"></i>
+          <i class="icon-orange-plaint"></i>
+          <i class="icon-blue-hook"></i>
+          <i class="icon-white-fork"></i>
+          <i class="icon-blue-fork"></i>
+          <i class="icon-orange-fork"></i>
+          <i class="icon-orange-copy"></i>
+        </dd>
+        <dd class="">
+         <h3 class="title">源码：</h3>
+         <textarea wrap="soft" spellcheck="false" style="width:100%;height:100px">
+         <i class="icon-blue-qmark"></i><i class="icon-blue-plaint"></i>
+          <i class="icon-orange-plaint"></i><i class="icon-blue-hook"></i>
+          <i class="icon-white-fork"></i><i class="icon-blue-fork"></i>
+          <i class="icon-orange-fork"></i><i class="icon-orange-copy"></i>
+         </textarea>
         </dd>
       </dl>
+      </details>
       <dl class="widget">
         <dt class="title">搜索框</dt>
         <dd>
@@ -182,5 +397,6 @@
 	</div>
 </div>
 <script type="text/javascript" src="../dist/js/robot.js"></script>
+<script type="text/javascript" src="js/widget.js"></script>
 </body>
 </html>

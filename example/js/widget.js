@@ -2,19 +2,55 @@ define(["require",
 		 "exports",
 		 "RobotTab",
 		 "RobotDropdown",
-		 "RobotDialog"], 		
+		 "RobotDialog",
+		 "RobotPage"], 		
 	function(
 		require,
 		exports,
 		RobotTab,
 		RobotDropdown,
-		RobotDialog){
+		RobotDialog,
+		RobotPage){
 	
 	"use strict";
 	
+	var initModule = function(){
+		// 分页
+	  var _pagePreview = new RobotPage({
+	    pagination : "#pagination1"
+	  });
+	  _pagePreview.renderPage({
+	  	currentPage : 2,
+	  	pageSize : 10,
+	  	totalPage : 14
+	  });
+	  $("#pagination1").delegate(".page-cell","click",function(){
+  		var page = $(this).data("page");
+  		if(page){
+  			_pagePreview.renderPage({
+			  	currentPage : page,
+			  	pageSize : 10,
+			  	totalPage : 14
+			  });
+  		}
+  	});
+	};
+	initModule();
+	var initDropdown = function(){
+		// 多选下拉菜单
+		var _multiDrop = new RobotDropdown({
+			pEle : "#mutl-city1"
+		});
+		_multiDrop.on("switch",function(obj){
+			console.log(obj);
+		});
+	};
+	initDropdown();
 	var event = function(){
 		/* 排序搜索 $this 当前节点对象 */
-		var tab1 = new RobotTab();
+		var tab1 = new RobotTab({
+			
+		});
 		tab1.on("switch",function(obj){
 			console.log(obj);
 		});

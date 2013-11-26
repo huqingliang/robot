@@ -32,3 +32,10 @@ dl dd{
 	top: 8px;
 	right: 54px;
 }
+details{
+  margin: 10px 0;
+}
+
+summary{
+  cursor: pointer;
+}

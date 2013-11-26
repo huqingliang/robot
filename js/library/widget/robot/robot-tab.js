@@ -2,9 +2,12 @@ define('library/widget/robot/robot-tab',
 		['require','exports','RobotEvent','jquery'],
  function(require,exports,RobotEvent,$){
 
-  var defaultOpts = {};
+  var defaultOpts = {
+  	pEle: ".ope-type"
+  };
   
 	var Tab = function(opts){
+		this.opts = $.extend({},defaultOpts,opts);
 		this.event();
 	};
 	// 将 Events 混入（mix-in）到Tab
@@ -16,7 +19,8 @@ define('library/widget/robot/robot-tab',
 	 * 事件监听
 	 */	
 	fn.event = function(){
-		var _self = this;
+		var _self = this
+		, param = _self.opts;
 		/** 
 		 * tab 切换
 	   * 触发 robotTab 事件 返回参数：{
@@ -24,8 +28,9 @@ define('library/widget/robot/robot-tab',
 		 *   e : e
 		 * }
 		 */
-		$(".ope-type").delegate(".link","click",function(e){
+		$(param.pEle).delegate(".link","click",function(e){
 			var $this = $(this);
+			console.log(e)
 			_self.changeStyle($this,function(){
 				_self.trigger('switch',{
 					$this : $this,
