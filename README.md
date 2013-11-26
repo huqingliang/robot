@@ -22,9 +22,10 @@ d)    他能做什么？
 	  date日历选择器，目前基于my97
 	  tootip 鼠标hover提醒
 	  
-e)    他依赖哪些技术
+e)    他依赖了哪些技术或框架
+
       1、jquery1.8
-	  2、less
-	  3、grunt编译工具
-	  3、amd的模块加载器：lofty
+      2、less
+      3、grunt编译工具
+      4、amd的模块加载器：lofty
 	  
