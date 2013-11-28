@@ -13,6 +13,14 @@ function(require,exports,$){
   var fn = RobotCommon.prototype; 
   
   /**
+   * filterBrackets
+   * 过滤尖括号，转换成&lt;\&gt;
+   */
+  fn.filterBrackets = function(str) {
+    return str.replace(/&/gm, '&amp;').replace(/</gm, '&lt;').replace(/>/gm, '&gt;');
+  };
+  
+  /**
    * 获取指定格式的系统时间
    * @param format 日期格式 如： "yyyy-MM-dd"
    * @return 指定格式的日期字符串 如： "2013-06-27"

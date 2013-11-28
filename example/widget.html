@@ -8,10 +8,14 @@
   <meta name="viewport"content="target-densitydpi=device-dpi,width=device-width" />
   <meta name="description" content="前端 机器人 robot pretty dropdown navs page" />
   <meta name="keywords" content="前端 机器人 robot pretty dropdown navs page" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://img.china.alibaba.com/favicon.ico"/>
   <link rel="stylesheet" href="http://style.c.aliimg.com/app/dw/css/idata/global/toolhandler.css" type="text/css"/>
   <!-- YOUR CODE START-->
+  
   <link rel="stylesheet" href="../dist/css/robot.css" type="text/css"/>
   <link rel="stylesheet" href="css/index.css" type="text/css"/>
+  <link rel="stylesheet" href="css/default.css" type="text/css"/>
+  <link rel="stylesheet" href="css/foundation.css" type="text/css"/>
   <link rel="stylesheet" href="http://style.c.aliimg.com/app/dw/css/shutter/block/customized.css" type="text/css" />
   <script type="text/javascript" src="../js/library/jquery183.js"></script>
   <script src="http://style.c.aliimg.com/fdevlib/js/lofty/port/lofty.js"></script>
@@ -114,7 +118,7 @@
        </button>
       </div>
       <h3 class="title mt10 mb10">JS源码，如果需要监听选择返回结果可以这么做，否则下面的JS不需要写：</h3>
-      <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+      <textarea class="soft" data-languages="javascript" spellcheck="false" style="width:100%;height:300px">
       define(["RobotDropdown","jquery"],function(RobotDropdown,$){
 
         var defaultOpts = {};
@@ -143,7 +147,7 @@
       });
       </textarea>
       <h3 class="title">HTML源码：</h3>
-       <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+       <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:300px">
         <div id="market-dropdown" class="dropdown">                   
          <ul id="dropdown-menu" data-target="market-data-source" class="dropdown-menu">
            <li data-key="marketId" data-id="1000281" class="menu-item"><a class="link" href="javascript:;">[DM]会员集市</a></li>
@@ -187,7 +191,7 @@
       </ul>
       </div>
       <h3 class="title mt10 mb10">JS源码，如果需要监听选择返回结果可以这么做，否则下面的JS不需要写：</h3>
-      <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+      <textarea class="soft" data-languages="javascript" spellcheck="false" style="width:100%;height:300px">
       define(["RobotDropdown","jquery"],function(RobotDropdown,$){
 
         var defaultOpts = {};
@@ -215,7 +219,7 @@
       });
       </textarea>
        <h3 class="title">HTML源码：</h3>
-       <textarea wrap="soft" spellcheck="false" style="width:100%;height:300px">
+       <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:300px">
         <div id="mutl-city1" class="btn-group multiple-dropdown">
           <input placeholder="多项请用逗号分隔" id="t-string-dim1" class="text-input" data-id="" value="长春,长治,阜阳" data-positon="0"/>
           <button type="button" class="btn">
@@ -259,7 +263,7 @@
         </dd>     
         <dd>
          <h3 class="title">源码：</h3>
-         <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px"><button class="btn-orange">橘子红了</button>
+         <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:120px"><button class="btn-orange">橘子红了</button>
          <button class="btn-blue-green">蓝绿色了</button>
          <button class="btn-blue-gray">蓝灰色了</button>
          <button class="btn-gray">啊灰色了</button>
@@ -279,7 +283,7 @@
         </dd>
         <dd>
           <h3 class="title">源码</h3>
-          <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+          <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:120px">
           <span class="ope-type" data-order="byTime">
             <a class="link sel" data-order="byTime"><em>时间</em><i class="icon-drop-blue"></i></a>
             <a class="link" data-order="byExportTimes"><em>导出量</em><i class="icon-drop-gray"></i></a>
@@ -294,7 +298,7 @@
         </dd>   
         <dd>
          <h3 class="title">源码</h3>
-          <textarea wrap="soft" spellcheck="false" style="width:100%;height:100px">
+          <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:100px">
            <span class="ope-type" data-order="byTime">
             <a class="link sel" data-order="byTime"><em>标准模式</em></a>
             <a class="link" data-order="byExportTimes"><em>SQL模式</em></a>
@@ -308,7 +312,7 @@
     <summary class="title">分页</summary>
     <div id="pagination1" class="pagination clearfix"></div>
     <h3 class="title">JS源码：</h3>
-    <textarea style="width:100%;height:300px">
+    <textarea class="soft" data-languages="javascript" style="width:100%;height:300px">
       define(["RobotPage","jquery"],function(RobotPage,$){
 
         var defaultOpts = {};
@@ -357,7 +361,7 @@
       });
     </textarea>
     <h3 class="title">HTML源码：</h3>
-    <textarea wrap="soft" spellcheck="false" style="width:100%;height:60px">
+    <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:60px">
       <div id="pagination1" class="pagination btn-data-pagination"></div>
     </textarea>
   </details>
@@ -378,7 +382,7 @@
           </dd>
           <dd>
            <h3 class="title">源码：</h3>
-           <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+           <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:120px">
             <i class="loading"></i>
             <i class="icon-full-screen"></i>
             <i class="icon-cross-white"></i>
@@ -399,7 +403,7 @@
           </dd>
           <dd>
            <h3 class="title">源码：</h3>
-           <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+           <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:120px">
             <i class="icon-date"></i>
             <i class="icon-gray-date"></i>
             <i class="icon-export"></i>
@@ -421,7 +425,7 @@
           </dd>
           <dd>
            <h3 class="title">源码：</h3>
-           <textarea wrap="soft" spellcheck="false" style="width:100%;height:120px">
+           <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:120px">
             <i class="icon-pencil-orange"></i>
             <i class="icon-pencil-white"></i>
             <i class="icon-drop-blue"></i>
@@ -444,7 +448,7 @@
           </dd>
           <dd class="">
            <h3 class="title">源码：</h3>
-           <textarea wrap="soft" spellcheck="false" style="width:100%;height:100px">
+           <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:100px">
            <i class="icon-blue-qmark"></i><i class="icon-blue-plaint"></i>
             <i class="icon-orange-plaint"></i><i class="icon-blue-hook"></i>
             <i class="icon-white-fork"></i><i class="icon-blue-fork"></i>
@@ -464,7 +468,7 @@
               </div>
             </dd>
             <dd>
-              <textarea wrap="soft" spellcheck="false" style="width:100%;height:100px"><div class="search">
+              <textarea class="soft" data-languages="xml" spellcheck="false" style="width:100%;height:100px"><div class="search">
                 <input type="text" placeholder="请输入搜索内容" class="text-input search-input" />
                 <i class="trash icon-trash-gray"></i>
                 <button class="btn-blue-green btn-search">搜索</button>
@@ -480,7 +484,9 @@
     <!--------------------------------- your code end --------------------------------->
   </div>
 </div>
+<div id="highlight-view" class="hide"></div>
 <script type="text/javascript" src="../dist/js/robot.js"></script>
 <script type="text/javascript" src="js/widget.js"></script>
+<script type="text/javascript" src="js/highlight.pack.js"></script>
 </body>
 </html>

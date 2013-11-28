@@ -3,16 +3,20 @@ define(["require",
 		 "RobotNavs",
 		 "RobotDropdown",
 		 "RobotDialog",
-		 "RobotPage"], 		
+		 "RobotPage",
+		 "RobotCommon"], 		
 	function(
 		require,
 		exports,
 		RobotNavs,
 		RobotDropdown,
 		RobotDialog,
-		RobotPage){
+		RobotPage,
+		RobotCommon){
 	
 	"use strict";
+	
+	var _common = new RobotCommon();
 	
 	var initModule = function(){
 		// 分页
@@ -79,4 +83,39 @@ define(["require",
 		});
 	}
 	event();
+	var initCode = function(){
+    /*
+    var viewDiv = document.getElementById("highlight-view");
+    var t1 = document.getElementById("t1");
+    var t2 = document.getElementById("t2");
+    var selector = document.getElementById("langSelector");
+    var selectedLang = selector.options[selector.selectedIndex].value.toLowerCase();
+    if(selectedLang) {
+        viewDiv.innerHTML = '<pre><code class="'+selectedLang+'">'+t1.value.escape()+"</code></pre>";
+    } else { // try auto
+        viewDiv.innerHTML = '<pre><code>' + t1.value.escape() + "</code></pre>";
+    }
+    hljs.highlightBlock(viewDiv.firstChild.firstChild);
+    t2.value = viewDiv.innerHTML;
+    */
+    
+    var viewDiv = document.getElementById("highlight-view");
+    var softs = $("textarea.soft");
+    var lang = "haml";
+    softs.each(function(k,v){
+      var value = $(v).val();
+      var languages = $(v).data("languages");
+      if(languages){
+        lang = languages;
+      }
+      viewDiv.innerHTML = '<pre><code class="' + lang + '">' + _common.filterBrackets(value) + "</code></pre>";
+      hljs.highlightBlock(viewDiv.firstChild.firstChild);
+      $(v).after(viewDiv.innerHTML);
+    });
+    
+   
+	};
+	$(document).ready(function(){
+	 initCode();
+	});
 });

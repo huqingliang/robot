@@ -8,6 +8,7 @@
   <meta name="viewport"content="target-densitydpi=device-dpi,width=device-width" />
   <meta name="description" content="前端 机器人 robot pretty dropdown navs page" />
   <meta name="keywords" content="前端 机器人 robot pretty dropdown navs page" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://img.china.alibaba.com/favicon.ico"/>
   <link rel="stylesheet" href="http://style.c.aliimg.com/app/dw/css/idata/global/toolhandler.css" type="text/css"/>
   <!-- YOUR CODE START-->
   <link rel="stylesheet" href="../dist/css/robot.css" type="text/css"/>
@@ -76,7 +77,10 @@
       <div class="row-fluid">
         <div class="span24">
           <ul class="nav nav-tabs">
-               <li class="active item tab-data-preview" data-target=".robot-home" clickcount="false">
+               <li class="active item tab-data-preview" data-target=".markdown-body" clickcount="false">
+                 <a class="tab">robot简介</a>
+               </li>
+               <li class="item tab-data-preview" data-target=".robot-home" clickcount="false">
                  <a class="tab">robot</a>
                </li>
                <li class="item tab-data-preview" data-target=".robot-product" clickcount="false">
@@ -93,7 +97,36 @@
       </div>
       <div class="row-fluid">
         <div class="span24">
-	        <details class="robot-home" open>
+          <article class="markdown-body entry-content" itemprop="mainContentOfPage">
+            <h1 class="title mt10 mb10">项目简介：</h1>
+						<h3 class="title">1)、傻瓜数据平台风格统一项目</h3>
+						<h3 class="title">a)、领域描述：统一傻瓜所有应用风格；推广内部应用风格统一化。</h3>
+						<h3 class="title">b)、应用场景：傻瓜数据平台、生意参谋、阿里指数、营销高手等数据产品。</h3>
+						<h3 class="title">c)、典型应用场景：傻瓜数据平台：快门</h3>
+						<h3 class="title">d)、他能做什么？</h3>
+						<ul>
+						  <li>1、响应式布局</li>
+						  <li>2、统一的网站风格</li>
+						  <li>3、简单入手的前端控件：</li>
+						  <li>4、单选（多选）下拉菜单、</li>
+						  <li>5、tab选择页</li>
+						  <li>6、page分页器</li>
+						  <li>7、button按钮</li>
+						  <li>8、icon丰富的网站icon</li>
+						  <li>9、pretty漂亮的符号分割账号连续输入控件</li>
+						  <li>10、search搜索框</li>
+						  <li>11、date日历选择器，目前基于my97</li>
+						  <li>12、tootip 鼠标hover提醒</li>
+						</ul>
+						<h3 class="title mt10 mb10">e)、他依赖了哪些技术或框架</h3>
+						<ul>
+						  <li>1、jquery1.8</li>
+						  <li>2、less</li>
+						  <li>3、grunt编译工具</li>
+						  <li>4、amd的模块加载器：lofty</li>
+						</ul>
+					</article>
+	        <details class="robot-home hide" open>
 	          <summary>robot</summary>
 		        <blockquote><img alt="" src="../doc/photoDoc/robot.jpg"></blockquote>
 		      </details>
